@@ -1,0 +1,22 @@
+<svg width="104" height="36" viewBox="0 0 104 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    id="Rectangle 563"
+    d="M93.891 26.4635C97.0793 29.4833 94.9422 34.8477 90.5508 34.8477H6.26147C3.57878 34.8477 1.40404 32.6729 1.40404 29.9902V6.14469C1.40404 3.46201 3.57879 1.28727 6.26147 1.28727H65.3741C66.6167 1.28727 67.8121 1.7635 68.7143 2.618L93.891 26.4635Z"
+    fill="url(#button-gradient-right)"
+    stroke="#299999"
+    stroke-width="0.883168"
+  />
+  <defs>
+    <linearGradient
+      id="button-gradient-right"
+      x1="52.407"
+      y1="35.2892"
+      x2="52.407"
+      y2="0.84568"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#299999" />
+      <stop offset="1" stop-color="#0A605C" />
+    </linearGradient>
+  </defs>
+</svg>

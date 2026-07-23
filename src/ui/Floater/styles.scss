@@ -1,0 +1,28 @@
+.floater-box {
+  background-color: var(--floater-bg);
+  border: 4px double var(--floater-border);
+  border-radius: 8px;
+  width: 100%;
+
+  .floater-item {
+    background-color: var(--floater-bg-item);
+    padding: 0.5rem 1rem;
+
+    &.has-action {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: var(--floater-bg-item-hover);
+    }
+
+    &.is-highlighted {
+      background-color: var(--floater-bg-item-highlighted);
+
+      &:hover {
+        color: var(--text-inverted);
+        background-color: var(--floater-bg-item-highlighted-hover);
+      }
+    }
+  }
+}

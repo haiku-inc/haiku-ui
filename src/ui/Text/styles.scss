@@ -1,0 +1,85 @@
+.text-block-info {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background-color: var(--mui-palette-Alert-infoStandardBg);
+  color: var(--mui-palette-Alert-infoColor);
+  display: flex;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    color: var(--mui-palette-info-main);
+    cursor: pointer;
+    margin: -2px 4px 0 0;
+  }
+
+  &.is-collapsed .text-block-info-content,
+  &.is-collapsed svg {
+    color: oklch(from currentColor l c h / 0.5);
+  }
+}
+
+.text-block-warning {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background-color: var(--mui-palette-Alert-warningStandardBg);
+  color: var(--mui-palette-Alert-warningColor);
+  display: flex;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    color: var(--mui-palette-warning-main);
+    margin: -2px 4px 0 0;
+  }
+
+  &.is-collapsed .text-block-warning-content,
+  &.is-collapsed svg {
+    color: oklch(from currentColor l c h / 0.5);
+  }
+}
+
+.text-block-success {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background-color: var(--mui-palette-Alert-successStandardBg);
+  color: var(--mui-palette-Alert-successColor);
+  display: flex;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    color: var(--mui-palette-success-main);
+    margin: -2px 4px 0 0;
+  }
+
+  &.is-collapsed .text-block-success-content,
+  &.is-collapsed svg {
+    color: oklch(from currentColor l c h / 0.5);
+  }
+}
+
+.text-block-error {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background-color: var(--mui-palette-Alert-errorStandardBg);
+  color: var(--mui-palette-Alert-errorColor);
+  display: flex;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    color: var(--mui-palette-error-main);
+    margin: -2px 4px 0 0;
+  }
+
+  &.is-collapsed .text-block-error-content,
+  &.is-collapsed svg {
+    color: oklch(from currentColor l c h / 0.5);
+  }
+}
+
+.text-block-comment {
+  color: var(--text-dimmed);
+  font-size: 0.85em;
+}

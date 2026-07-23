@@ -1,0 +1,271 @@
+@mixin loader-light-theme {
+  --overlay-bg: #fffb;
+
+  // loader ring
+  --lr-bg: #acacac;
+  --lr-border: #eb0c1b;
+  --lr-shadow: #216e6d;
+  --lr-rotate1-border: #eb0c1b;
+  --lr-rotate2-border: #eb0c1b;
+  --lr-scale-border: #eb0c1b;
+  --lr-scale-color: navy;
+
+  // filler
+  --lr-rotate-bg-0: #51c3c4;
+  --lr-rotate-bg-shadow-0: #195a5a;
+  --lr-rotate-bg-25: #fff;
+  --lr-rotate-bg-shadow-25: #fff;
+  --lr-rotate-bg-50: #fc0;
+  --lr-rotate-bg-shadow-50: #51c3c4;
+  --lr-rotate-bg-75: #fc0;
+  --lr-rotate-bg-shadow-75: #fff;
+  --lr-rotate-bg-100: #51c3c4;
+  --lr-rotate-bg-shadow-100: #195a5a;
+
+  // outer ring
+  --lr-rotate-border-0: #eb0c1b;
+  --lr-rotate-border-25: #fff;
+  --lr-rotate-border-shadow-25: #fff;
+  --lr-rotate-border-50: #eb0c1b;
+  --lr-rotate-border-75: #910912;
+  --lr-rotate-border-100: #eb0c1b;
+}
+@mixin loader-dark-theme {
+  --overlay-bg: #000c;
+
+  // loader ring
+  --lr-bg: #2c2c2c;
+  --lr-border: #eb0c1b;
+  --lr-shadow: #216e6d;
+  --lr-rotate1-border: #eb0c1b;
+  --lr-rotate2-border: #eb0c1b;
+  --lr-scale-border: #eb0c1b;
+  --lr-scale-color: navy;
+
+  // filler
+  --lr-rotate-bg-0: #51c3c4;
+  --lr-rotate-bg-shadow-0: #195a5a;
+  --lr-rotate-bg-25: #000;
+  --lr-rotate-bg-shadow-25: #000;
+  --lr-rotate-bg-50: #195a5a;
+  --lr-rotate-bg-shadow-50: #51c3c4;
+  --lr-rotate-bg-75: #195a5a;
+  --lr-rotate-bg-shadow-75: #000;
+  --lr-rotate-bg-100: #51c3c4;
+  --lr-rotate-bg-shadow-100: #195a5a;
+
+  // outer ring
+  --lr-rotate-border-0: #eb0c1b;
+  --lr-rotate-border-25: #000;
+  --lr-rotate-border-shadow-25: #000;
+  --lr-rotate-border-50: #eb0c1b;
+  --lr-rotate-border-75: #910912;
+  --lr-rotate-border-100: #eb0c1b;
+}
+
+// OS Default.
+:root:not(.light, .dark) {
+  @media (prefers-color-scheme: light) {
+    @include loader-light-theme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include loader-dark-theme;
+  }
+}
+
+:root.light {
+  @include loader-light-theme;
+}
+
+:root.dark {
+  @include loader-dark-theme;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: var(--overlay-bg);
+  position: fixed;
+  z-index: 9020;
+  inset: 0;
+}
+
+.loader-ring {
+  width: 13rem;
+  height: 13rem;
+  margin: 0.4rem;
+  background: var(--lr-bg);
+  border: 0.3rem solid var(--lr-border);
+  filter: drop-shadow(0 0 0.7rem var(--lr-shadow));
+  border-radius: 100%;
+  box-sizing: border-box;
+  animation: 6s ease-in infinite normal both running change-border-color;
+  position: fixed;
+  z-index: 9022;
+  top: 50%;
+  left: 50%;
+  translate: -50% -80%;
+
+  &.relative {
+    position: relative;
+    transform: scale(0.5);
+    inset: 0;
+    translate: initial;
+  }
+
+  &.tiny {
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0;
+    inset: 0;
+    filter: none;
+  }
+
+  .filler {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    animation: 6s ease-in infinite normal both running change-background-color;
+    transition: background-image linear 1s;
+    position: relative;
+    z-index: 9023;
+
+    .rotate {
+      border: 2rem solid transparent;
+      box-sizing: border-box;
+      border-radius: 100%;
+      width: 10rem;
+      height: 10rem;
+      position: absolute;
+      top: calc(50% - 5rem);
+      left: calc(50% - 5rem);
+
+      &.rotate-1 {
+        border-top-color: var(--lr-rotate1-border);
+        animation:
+          4s ease-in infinite normal both running loader-rotation,
+          4s ease-in-out infinite loader-appearing;
+      }
+
+      &.rotate-2 {
+        border-bottom-color: var(--lr-rotate1-border);
+        animation:
+          4s ease-out infinite normal both running loader-rotation,
+          4s ease-in-out infinite loader-appearing;
+      }
+    }
+
+    .scale {
+      position: absolute;
+      width: 8rem;
+      height: 8rem;
+      border: 2px dotted var(--lr-scale-border);
+      border-radius: 100%;
+      color: var(--lr-scale-color);
+      top: calc(50% - 4rem);
+      left: calc(50% - 4rem);
+      animation: 6s ease-in-out infinite normal both running scale-border-solidify;
+      background: url('@/assets/images/logo-hp-emblem.svg') no-repeat 1.125rem;
+      background-size: 5rem;
+    }
+  }
+
+  &.tiny .filler {
+    transform: scale(0.15);
+    opacity: 0.5;
+  }
+
+  @keyframes scale-border-solidify {
+    0% {
+      border-style: dotted;
+    }
+
+    25% {
+      border-style: dotted;
+    }
+
+    50% {
+      border-style: dashed;
+    }
+
+    75% {
+      border-style: dotted;
+    }
+
+    100% {
+      border-style: dotted;
+    }
+  }
+  @keyframes loader-rotation {
+    from {
+      rotate: 0deg;
+    }
+
+    to {
+      rotate: 360deg;
+    }
+  }
+  @keyframes loader-appearing {
+    0% {
+      opacity: 0.2;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0.2;
+    }
+  }
+  @keyframes change-background-color {
+    0% {
+      background-color: var(--lr-rotate-bg-0);
+      box-shadow: inset 0 0 5rem var(--lr-rotate-bg-shadow-0);
+    }
+
+    25% {
+      background-color: var(--lr-rotate-bg-25);
+      box-shadow: inset 0 0 5rem var(--lr-rotate-bg-shadow-25);
+    }
+
+    50% {
+      background-color: var(--lr-rotate-bg-50);
+      box-shadow: inset 0 0 5rem var(--lr-rotate-bg-shadow-50);
+    }
+
+    75% {
+      background-color: var(--lr-rotate-bg-75);
+      box-shadow: inset 0 0 5rem var(--lr-rotate-bg-shadow-75);
+    }
+
+    100% {
+      background-color: var(--lr-rotate-bg-100);
+      box-shadow: inset 0 0 5rem var(--lr-rotate-bg-shadow-100);
+    }
+  }
+  @keyframes change-border-color {
+    0% {
+      border-color: var(--lr-rotate-border-0);
+    }
+
+    25% {
+      border-color: var(--lr-rotate-border-25);
+      box-shadow: 0 0 0.5rem 0.5rem var(--lr-rotate-border-shadow-25);
+    }
+
+    50% {
+      border-color: var(--lr-rotate-border-50);
+    }
+
+    75% {
+      border-color: var(--lr-rotate-border-75);
+    }
+
+    100% {
+      border-color: var(--lr-rotate-border-100);
+    }
+  }
+}

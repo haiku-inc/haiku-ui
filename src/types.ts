@@ -1,0 +1,30 @@
+export type ChallengeType = 'range' | 'mission' | 'dojo' | 'forge' | 'media';
+export type ChallengeSpecialty = 'none' | 'forensic' | 'offensive' | 'defensive' | 'o+d';
+export type Specialty = 'none' | 'forensic' | 'offensive' | 'defensive' | 'redBlue';
+export type OperatingSystem = 'linux' | 'windows';
+export type RoadmapProgress = {
+  roadmapId: number;
+  title: string;
+  description: string;
+  isCompleted: boolean;
+  completedAt: string;
+  badgeId: string;
+  illustrationURL: string;
+  badgeTitle: string | null;
+  badgeDescription: string | null;
+  totalSteps: number;
+  completedSteps: number;
+  requiredSteps: number;
+  completedRequiredSteps: number;
+  progressPercentage: number;
+  lastActivityDate: string;
+};
+export type LearningObjectives = {
+  learning_objective_id: number;
+  range_id: string;
+  learning_objective: string;
+  created_dt: string;
+  last_modified_dt: string;
+  effdt: string;
+  effstatus: string;
+};

@@ -1,0 +1,131 @@
+@property --gradient-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 360deg;
+  }
+
+  100% {
+    --gradient-angle: 0deg;
+  }
+}
+
+button.green-button {
+  border: 1px solid var(--background-2);
+  border-radius: 4px;
+  background: var(--secondary);
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  font-family: Orbitron, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  cursor: pointer;
+  position: relative;
+  color: var(--text-inverted);
+  text-shadow:
+    var(--text-primary) 0.5px 0.5px 1px,
+    var(--text-primary) 0 0 1px,
+    var(--text-primary) 0 0 1px;
+
+  &.is-disabled {
+    filter: grayscale(80%);
+  }
+  &.is-disabled:active {
+    filter: sepia(100%) hue-rotate(300deg) brightness(70%) saturate(420%);
+  }
+
+  &.hyper-active {
+    &::before {
+      content: attr(data-before);
+      background: conic-gradient(
+        from var(--gradient-angle),
+        var(--beacon-0),
+        var(--beacon-1),
+        var(--beacon-2),
+        var(--beacon-3),
+        var(--beacon-4),
+        var(--beacon-3),
+        var(--beacon-2),
+        var(--beacon-1),
+        var(--beacon-0)
+      );
+      border-radius: inherit;
+      color: var(--text-inverted);
+      position: absolute;
+      inset: -2px;
+      box-shadow: 0 0 5px var(--beacon-3);
+      z-index: 1;
+      animation: rotation 2s linear infinite;
+      transition: all 4s;
+    }
+
+    &::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--primary);
+      border-radius: inherit;
+      content: attr(data-after);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      color: var(--text-inverted);
+      transition: all 2s;
+    }
+
+    &:hover::before {
+      inset: -15px;
+    }
+
+    &:hover::after {
+      background: var(--secondary);
+    }
+  }
+
+  &:hover {
+    &::before {
+      content: attr(data-before);
+      background: conic-gradient(
+        from var(--gradient-angle),
+        var(--beacon-0),
+        var(--beacon-1),
+        var(--beacon-2),
+        var(--beacon-3),
+        var(--beacon-4),
+        var(--beacon-3),
+        var(--beacon-2),
+        var(--beacon-1),
+        var(--beacon-0)
+      );
+      border-radius: inherit;
+      color: var(--text-inverted);
+      position: absolute;
+      inset: -2px;
+      box-shadow: 0 0 15px var(--beacon-3);
+      z-index: 1;
+      animation: rotation 2s linear infinite;
+    }
+
+    &::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--primary);
+      border-radius: inherit;
+      content: attr(data-after);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      color: var(--text-inverted);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.98);
+  }
+}

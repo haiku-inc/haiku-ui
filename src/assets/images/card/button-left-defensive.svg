@@ -1,0 +1,21 @@
+<svg width="104" height="36" viewBox="0 0 104 36" fill="none" xmlns="http://www.w3.org/2000/svg">nsive">
+  <path
+    d="M10.1146 26.4634C6.9263 29.4831 9.06345 34.8475 13.4548 34.8475H97.7441C100.427 34.8475 102.602 32.6727 102.602 29.9901V6.14451C102.602 3.46183 100.427 1.28708 97.7441 1.28708H38.6315C37.3889 1.28708 36.1935 1.76332 35.2913 2.61782L10.1146 26.4634Z"
+    fill="url(#button-gradient-left-defensive)"
+    stroke="#6186CB"
+    stroke-width="0.883168"
+  />
+  <defs>
+    <linearGradient
+      id="button-gradient-left-defensive"
+      x1="51.5986"
+      y1="35.2891"
+      x2="51.5986"
+      y2="0.845497"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#6287c9" />
+      <stop offset="1" stop-color="#316282" />
+    </linearGradient>
+  </defs>
+</svg>

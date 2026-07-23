@@ -1,0 +1,10 @@
+.rating-stars {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+
+  &.is-editable {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,56 @@
+.specialty-box {
+  width: 70px;
+  height: 40px;
+  border: 1px solid #1c2744;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+
+  padding-top: 3px;
+
+  color: var(--text-light);
+
+  background: linear-gradient(0deg, #052135 0%, #101f30 40%, #242d3a 60%, #3e4348 80%, #525354 100%);
+  .caption {
+    filter: drop-shadow(0 0 4px #fff);
+
+    font-family: Orbitron, sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 124.98%;
+
+    text-transform: uppercase;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  &.specialty-none .caption {
+    font-size: 29px;
+  }
+
+  &.specialty-offensive {
+    border-color: #ff040b;
+    background: linear-gradient(180deg, #4e0101 0%, #850707 45.83%, #480000 100%);
+  }
+
+  &.specialty-defensive {
+    border-color: #6287c9;
+    background: linear-gradient(180deg, #06283f 0%, #316282 44.79%, #002035 100%);
+  }
+
+  &.specialty-forensic {
+    border-color: #299999;
+    background: linear-gradient(180deg, #055353 0%, #299999 48.96%, #004848 100%);
+  }
+
+  &.specialty-redBlue {
+    border-color: #097979;
+    background: linear-gradient(180deg, #850707 0%, #111d2f 66.15%, #002035 100%);
+  }
+}

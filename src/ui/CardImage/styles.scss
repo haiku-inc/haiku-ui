@@ -1,0 +1,16 @@
+.card-image-container {
+  max-height: 450px;
+  background-size: cover;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  corner-shape: squircle;
+  position: relative;
+
+  &.is-squared {
+    border-radius: 8px;
+  }
+  &.rt-scoop {
+    corner-shape: squircle superellipse(-2.3) squircle squircle;
+    border-top-right-radius: 52px;
+  }
+}

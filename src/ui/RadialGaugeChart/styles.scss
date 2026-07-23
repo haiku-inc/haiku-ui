@@ -1,0 +1,105 @@
+.full-scale {
+  position: relative;
+  font-family: Cairo, sans-serif;
+
+  .circular-tube {
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+
+    &-back {
+      position: relative;
+      border-bottom: none;
+      box-sizing: border-box;
+      border-color: var(--radial-gauge-back-filler, #4b4d60);
+    }
+
+    &-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      rotate: 0deg;
+      transition: rotate 300ms;
+
+      &-filler {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-color: var(--radial-gauge-front-filler, #64b568);
+        border-bottom: none;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .scale {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1px;
+
+    > * {
+      position: absolute;
+    }
+
+    &-step {
+      &-value {
+        position: absolute;
+        line-height: 20px;
+        width: 50px;
+        height: 20px;
+        top: -10px;
+        left: -50px;
+        text-align: right;
+
+        &.middle {
+          left: -25px;
+          top: -15px;
+          text-align: center;
+        }
+
+        &.right-hand {
+          left: 0;
+          text-align: left;
+        }
+      }
+    }
+
+    &-instep {
+      position: absolute;
+
+      &-dash {
+        position: absolute;
+        right: 0;
+        height: 1px;
+        background: var(--radial-gauge-ticks, #1d203a);
+      }
+    }
+  }
+
+  .score {
+    position: absolute;
+    top: 20px;
+
+    &-digit {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+
+      &.overdraft {
+        color: var(--radial-gauge-overdraft, #eb0c1b);
+      }
+    }
+  }
+}

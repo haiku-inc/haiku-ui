@@ -1,0 +1,52 @@
+.haiku-tabs {
+  display: flex;
+
+  &.condensed {
+    gap: 4px;
+
+    .tab {
+      padding: 3px 2px 0 2px;
+      margin: 0;
+    }
+  }
+
+  &:not(.condensed) {
+    border: 1px dotted oklch(from var(--tertiary) l c h / 0.3);
+    background-color: oklch(from var(--tertiary) l c h / 0.05);
+    justify-content: space-around;
+    border-radius: 5px;
+
+    .tab {
+      flex: 1;
+    }
+  }
+
+  &-title {
+    font-family: var(--font-oxanium);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--tertiary);
+  }
+
+  .tab {
+    min-width: auto;
+    border-radius: 0;
+    box-sizing: border-box;
+
+    border-bottom: 3px solid transparent;
+    padding: 3px 16px 0 16px;
+
+    white-space: pre;
+    text-transform: none;
+
+    &:hover {
+      color: var(--tertiary);
+      background-color: oklch(from var(--tertiary) l c h / 0.15);
+    }
+
+    &.is-active {
+      border-bottom: 3px solid oklch(from var(--primary) l c h / 0.6);
+    }
+  }
+}

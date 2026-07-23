@@ -1,0 +1,111 @@
+/* CSS Variables for easy updates */
+:root {
+  --circle-size: 50px;
+  --circle-size-small: 20px;
+  --margin-size: 30px;
+  /* Distance for one slot shift: 25px + 10px + 25px = 60px */
+  --shift-distance: 80px;
+  --double-shift: 160px; /* Distance for two slot shifts */
+  --animation-duration: 6s; /* 2 forward shifts (3s) + 2 backward shifts (3s) */
+}
+
+/* Container Styling */
+.circles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--margin-size);
+}
+
+/* Base Circle Styling */
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  /* Apply the single animation rule to all */
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.red {
+  animation-name: red-path;
+  background-color: #e74c3c;
+  animation-delay: 0s; /* Starts at the beginning of the cycle (Slot 1) */
+}
+
+.green {
+  animation-name: green-path;
+  background-color: #2ecc71;
+  /* Starts at the 16.66% point (Slot 2) which is 1s into the 6s cycle */
+  animation-delay: 0s; /* Starts at the beginning of the cycle (Slot 1) */
+}
+
+.blue {
+  animation-name: blue-path;
+  background-color: #3498db;
+  /* Starts at the 33.33% point (Slot 3) which is 2s into the 6s cycle */
+  animation-delay: 0s; /* Starts at the beginning of the cycle (Slot 1) */
+}
+
+/* Red Circle: Slot 1 -> 2 -> 3 -> 2 -> 1 */
+@keyframes red-path {
+  0% {
+    transform: translateX(0);
+  } /* Slot 1 */
+  25% {
+    transform: translateX(var(--shift-distance));
+  } /* Slot 2 */
+  50% {
+    transform: translateX(var(--double-shift));
+  } /* Slot 3 */
+  75% {
+    transform: translateX(var(--shift-distance));
+  } /* Slot 2 */
+  100% {
+    transform: translateX(0);
+  } /* Slot 1 */
+}
+
+/* Green Circle: Slot 2 -> 3 -> 1 -> 3 -> 2
+    (Displacement from its starting Slot 2 position) */
+@keyframes green-path {
+  0% {
+    transform: translateX(0);
+  } /* Slot 2 -> Slot 2 (0px) */
+  25% {
+    transform: translateX(var(--shift-distance));
+  } /* Slot 2 -> Slot 3 (+60px) */
+  50% {
+    transform: translateX(calc(-1 * (var(--shift-distance))));
+  } /* Slot 2 -> Slot 1 (-60px) */
+  75% {
+    transform: translateX(var(--shift-distance));
+  } /* Slot 2 -> Slot 3 (+60px) */
+  100% {
+    transform: translateX(0);
+  } /* Slot 2 -> Slot 2 (0px) */
+}
+
+/* Blue Circle: Slot 3 -> 1 -> 2 -> 1 -> 3
+    (Displacement from its starting Slot 3 position) */
+@keyframes blue-path {
+  0% {
+    transform: translateX(0);
+  } /* Slot 3 -> Slot 3 (0px) */
+  25% {
+    transform: translateX(calc(-1 * var(--double-shift)));
+  } /* Slot 3 -> Slot 1 (-120px) */
+  50% {
+    transform: translateX(calc(-1 * var(--shift-distance)));
+  } /* Slot 3 -> Slot 2 (-60px) */
+  75% {
+    transform: translateX(calc(-1 * var(--double-shift)));
+  } /* Slot 3 -> Slot 1 (-120px) */
+  100% {
+    transform: translateX(0);
+  } /* Slot 3 -> Slot 3 (0px) */
+}

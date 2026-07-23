@@ -1,0 +1,75 @@
+.bottom-section {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(var(--background-card) 0%, var(--background-card) 70%, var(--background) 100%);
+  margin-top: 60px;
+
+  .trapezoid {
+    max-width: 650px;
+    width: 80%;
+    height: 60px;
+    background: var(--background);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    transform: perspective(5px) rotateX(-1deg);
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -20px;
+      top: 3px;
+    }
+
+    &::after {
+      background: var(--background-card);
+      border-top-left-radius: 20px;
+    }
+
+    &::before {
+      background: var(--background);
+    }
+
+    div {
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: -20px;
+        top: 3px;
+      }
+
+      &::after {
+        background: var(--background-card);
+        border-top-right-radius: 20px;
+      }
+
+      &::before {
+        background: var(--background);
+      }
+    }
+  }
+
+  .challenge {
+    text-align: center;
+    margin: 40px auto 0;
+  }
+
+  .challenge-descr {
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 0 40px;
+  }
+
+  .btn-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
