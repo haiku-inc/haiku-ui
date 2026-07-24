@@ -3,7 +3,7 @@
   border-radius: 16px;
 
   &:not(.no-bg) {
-    background: url('@/assets/images/card/hexagonal-tiling.svg'), var(--card-image-background);
+    background: url('../../assets/images/card/hexagonal-tiling.svg'), var(--card-image-background);
     box-shadow: inset 0 0 20px var(--shadow-inset);
     height: auto;
     max-height: calc(100vh - 200px);

@@ -1,7 +1,7 @@
-import CardButtonLeft from '@/assets/images/card/button-left.svg';
-import CardButtonRight from '@/assets/images/card/button-right.svg';
-import SkeletonBlock from '@/ui/SkeletonBlock';
-import Thumbnail from '@/ui/Thumbnail';
+import CardButtonLeft from '../../assets/images/card/button-left.svg';
+import CardButtonRight from '../../assets/images/card/button-right.svg';
+import SkeletonBlock from '../SkeletonBlock';
+import Thumbnail from '../Thumbnail';
 import type { FC } from 'react';
 
 const CardIsleSkeleton: FC = () => (

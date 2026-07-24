@@ -1,4 +1,4 @@
-import Table from '@/ui/Table';
+import Table from '../Table';
 import Checkbox from '@mui/material/Checkbox';
 import type { FC } from 'react';
 

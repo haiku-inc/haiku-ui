@@ -1,7 +1,7 @@
-import defaultBadge from '@/assets/images/default-haiku-hex.png';
-import Loading from '@/ui/Loading';
-import SkeletonText from '@/ui/SkeletonText';
-import Tooltip from '@/ui/Tooltip';
+import defaultBadge from '../../assets/images/default-haiku-hex.png';
+import Loading from '../Loading';
+import SkeletonText from '../SkeletonText';
+import Tooltip from '../Tooltip';
 import type { CSSProperties, FC, PropsWithChildren } from 'react';
 import './styles.scss';
 

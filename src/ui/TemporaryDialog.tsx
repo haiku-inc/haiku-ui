@@ -1,4 +1,4 @@
-import { enterKeyDown } from '@/utils/keyboard';
+import { enterKeyDown } from '../utils/keyboard';
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { useEffect, useRef, useState, type FC, type ReactElement } from 'react';
 

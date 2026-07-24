@@ -1,7 +1,7 @@
-import { useLayoutSetup } from '@/context/LayoutContext';
-import PageTitle from '@/ui/PageTitle';
-import SkeletonText from '@/ui/SkeletonText';
-import Text from '@/ui/Text';
+import { useLayoutSetup } from '../../context/LayoutContext';
+import PageTitle from '../PageTitle';
+import SkeletonText from '../SkeletonText';
+import Text from '../Text';
 import { useLayoutEffect, type FC, type PropsWithChildren } from 'react';
 import Action from './Action';
 import Pill from './Pill';

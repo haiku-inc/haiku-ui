@@ -21,9 +21,6 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
 
-    "paths": {
-      "@/*": ["./src/*"],
-    },
     "types": ["vite-plugin-svgr/client"],
   },
   "envDir": "env",

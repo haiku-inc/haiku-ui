@@ -1,13 +1,13 @@
-import image0 from '@/assets/images/woh-bg-main-0.avif';
-import image1 from '@/assets/images/woh-bg-main-1.avif';
-import image2 from '@/assets/images/woh-bg-main-2.avif';
-import image3 from '@/assets/images/woh-bg-main-3.avif';
-import image4 from '@/assets/images/woh-bg-main-4.avif';
-import image5 from '@/assets/images/woh-bg-main-5.avif';
-import image6 from '@/assets/images/woh-bg-main-6.avif';
-import image7 from '@/assets/images/woh-bg-main-7.avif';
-import image8 from '@/assets/images/woh-bg-main-8.avif';
-import image9 from '@/assets/images/woh-bg-main-9.avif';
+import image0 from '../assets/images/woh-bg-main-0.avif';
+import image1 from '../assets/images/woh-bg-main-1.avif';
+import image2 from '../assets/images/woh-bg-main-2.avif';
+import image3 from '../assets/images/woh-bg-main-3.avif';
+import image4 from '../assets/images/woh-bg-main-4.avif';
+import image5 from '../assets/images/woh-bg-main-5.avif';
+import image6 from '../assets/images/woh-bg-main-6.avif';
+import image7 from '../assets/images/woh-bg-main-7.avif';
+import image8 from '../assets/images/woh-bg-main-8.avif';
+import image9 from '../assets/images/woh-bg-main-9.avif';
 
 const getCoordinatesInDocument = (element: HTMLElement) => {
   const box = element.getBoundingClientRect();

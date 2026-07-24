@@ -1,4 +1,4 @@
-import SkeletonBlock from '@/ui/SkeletonBlock';
+import SkeletonBlock from '../SkeletonBlock';
 import { TablePagination } from '@mui/material';
 import type { ChangeEvent, FC } from 'react';
 

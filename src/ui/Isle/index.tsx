@@ -1,7 +1,7 @@
 import type { CSSProperties, FC, MouseEventHandler, PropsWithChildren, ReactNode, Ref } from 'react';
 
-import SkeletonBlock from '@/ui/SkeletonBlock';
-import Text from '@/ui/Text';
+import SkeletonBlock from '../SkeletonBlock';
+import Text from '../Text';
 import classNames from 'classnames';
 import './styles.scss';
 

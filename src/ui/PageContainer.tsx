@@ -1,4 +1,4 @@
-import SectionHeader from '@/ui/SectionHeader';
+import SectionHeader from '../ui/SectionHeader';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 

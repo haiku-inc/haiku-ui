@@ -1,4 +1,4 @@
-import { random25to60, random5to25 } from '@/utils/general';
+import { random25to60, random5to25 } from '../../utils/general';
 import { Skeleton } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren, Ref } from 'react';

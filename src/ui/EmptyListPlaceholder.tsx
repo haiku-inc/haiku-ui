@@ -1,4 +1,4 @@
-import Text from '@/ui/Text';
+import Text from '../ui/Text';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 

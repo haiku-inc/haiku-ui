@@ -1,4 +1,4 @@
-import SkeletonBlock from '@/ui/SkeletonBlock';
+import SkeletonBlock from '../SkeletonBlock';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField } from '@mui/material';

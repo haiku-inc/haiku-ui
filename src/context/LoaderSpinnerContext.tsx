@@ -1,4 +1,4 @@
-import Loading from '@/ui/Loading';
+import Loading from '../ui/Loading';
 import type { Dispatch, FC, PropsWithChildren, SetStateAction } from 'react';
 import { createContext, useContext, useState } from 'react';
 

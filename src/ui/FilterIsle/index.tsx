@@ -1,4 +1,4 @@
-import SkeletonBlock from '@/ui/SkeletonBlock';
+import SkeletonBlock from '../SkeletonBlock';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import { useEffect, useRef } from 'react';

@@ -22,9 +22,6 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
 
-    "paths": {
-      "@/*": ["./*"]
-    },
     "types": ["vite-plugin-svgr/client", "@webgpu/types", "geojson"]
   },
   "envDir": "env",

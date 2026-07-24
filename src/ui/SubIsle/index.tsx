@@ -1,4 +1,4 @@
-import SkeletonBlock from '@/ui/SkeletonBlock';
+import SkeletonBlock from '../SkeletonBlock';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 import classNames from 'classnames';

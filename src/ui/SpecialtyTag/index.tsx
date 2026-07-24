@@ -1,7 +1,7 @@
-import SpecialtyDefensiveIcon from '@/assets/unicons/specialty/defensive.svg';
-import SpecialtyForensicIcon from '@/assets/unicons/specialty/forensic.svg';
-import SpecialtyOffensiveIcon from '@/assets/unicons/specialty/offensive.svg';
-import SpecialtyRedBlueIcon from '@/assets/unicons/specialty/redblue.svg';
+import SpecialtyDefensiveIcon from '../../assets/unicons/specialty/defensive.svg';
+import SpecialtyForensicIcon from '../../assets/unicons/specialty/forensic.svg';
+import SpecialtyOffensiveIcon from '../../assets/unicons/specialty/offensive.svg';
+import SpecialtyRedBlueIcon from '../../assets/unicons/specialty/redblue.svg';
 import './styles.scss';
 
 type Specialty = 'none' | 'offensive' | 'defensive' | 'forensic' | 'redBlue';

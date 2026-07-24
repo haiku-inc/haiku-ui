@@ -1,5 +1,5 @@
-import type { ChallengeType } from '@/types';
-import CardTitleUniversal from '@/assets/images/card/title-universal.svg';
+import type { ChallengeType } from '../types';
+import CardTitleUniversal from '../assets/images/card/title-universal.svg';
 import classNames from 'classnames';
 
 interface CardTitleProps {

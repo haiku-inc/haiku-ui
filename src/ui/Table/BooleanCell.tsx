@@ -1,4 +1,4 @@
-import Cell from '@/ui/Table/Cell';
+import Cell from '../Table/Cell';
 import type { TableCellProps } from '@mui/material';
 import classNames from 'classnames';
 import type { FC } from 'react';

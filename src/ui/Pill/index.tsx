@@ -1,4 +1,4 @@
-import SkeletonBlock from '@/ui/SkeletonBlock';
+import SkeletonBlock from '../SkeletonBlock';
 import { Chip } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, JSX, ReactNode } from 'react';

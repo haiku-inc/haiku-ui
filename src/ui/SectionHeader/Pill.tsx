@@ -1,4 +1,4 @@
-import Isle from '@/ui/Isle';
+import Isle from '../Isle';
 import classNames from 'classnames';
 import type { FC, JSX, PropsWithChildren } from 'react';
 
