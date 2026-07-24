@@ -1,7 +1,7 @@
-import { random25to60, random5to25 } from '../../utils/general';
 import { Skeleton } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren, Ref } from 'react';
+import { random25to60, random5to25 } from '../../utils/general';
 import './styles.scss';
 
 interface Props extends HTMLAttributes<HTMLSpanElement> {

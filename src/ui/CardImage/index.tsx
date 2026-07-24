@@ -1,7 +1,7 @@
-import SkeletonText from '../../ui/SkeletonText';
-import { defaultBackground } from '../../utils/layout';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
+import SkeletonText from '../../ui/SkeletonText';
+import { defaultBackground } from '../../utils/layout';
 import './styles.scss';
 
 interface Props {

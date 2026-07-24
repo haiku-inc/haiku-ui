@@ -1,8 +1,8 @@
-import SkeletonBlock from '../SkeletonBlock';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField } from '@mui/material';
 import { useEffect, useState, type ChangeEventHandler, type FC } from 'react';
+import SkeletonBlock from '../SkeletonBlock';
 
 interface Props {
   value?: string;

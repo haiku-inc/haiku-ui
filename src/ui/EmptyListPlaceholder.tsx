@@ -1,6 +1,6 @@
-import Text from '../ui/Text';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
+import Text from '../ui/Text';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title?: string;

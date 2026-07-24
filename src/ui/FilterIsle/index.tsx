@@ -1,7 +1,7 @@
-import SkeletonBlock from '../SkeletonBlock';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import { useEffect, useRef } from 'react';
+import SkeletonBlock from '../SkeletonBlock';
 import InputDebouncedSearch from './InputDebouncedSearch';
 import PeriodSelector from './PeriodSelector';
 import ResetButton from './ResetButton';

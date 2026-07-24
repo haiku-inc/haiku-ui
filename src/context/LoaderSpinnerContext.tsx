@@ -1,6 +1,6 @@
-import Loading from '../ui/Loading';
 import type { Dispatch, FC, PropsWithChildren, SetStateAction } from 'react';
 import { createContext, useContext, useState } from 'react';
+import Loading from '../ui/Loading';
 
 interface LoaderSpinnerContextValue {
   hasLoaderSpinner: boolean;

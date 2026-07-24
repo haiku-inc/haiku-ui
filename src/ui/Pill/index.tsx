@@ -1,7 +1,7 @@
-import SkeletonBlock from '../SkeletonBlock';
 import { Chip } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, JSX, ReactNode } from 'react';
+import SkeletonBlock from '../SkeletonBlock';
 import './styles.scss';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {

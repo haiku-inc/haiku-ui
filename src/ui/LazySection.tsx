@@ -1,7 +1,7 @@
-import { useInView } from '../hooks/useInView';
-import SkeletonBlock from '../ui/SkeletonBlock';
 import type { FC, ReactNode } from 'react';
 import { useEffect, useState } from 'react';
+import { useInView } from '../hooks/useInView';
+import SkeletonBlock from '../ui/SkeletonBlock';
 
 interface LazySectionProps {
   children: ReactNode;

@@ -1,11 +1,11 @@
+import classNames from 'classnames';
+import type { FC } from 'react';
 import CardButtonLeft from '../../assets/images/card/button-left.svg';
 import CardButtonRight from '../../assets/images/card/button-right.svg';
 import Isle from '../Isle';
 import SkeletonBlock from '../SkeletonBlock';
 import SkeletonText from '../SkeletonText';
 import Thumbnail from '../Thumbnail';
-import classNames from 'classnames';
-import type { FC } from 'react';
 
 interface GameCardSkeletonProps {
   isListItem?: boolean;

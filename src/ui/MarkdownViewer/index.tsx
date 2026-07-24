@@ -1,7 +1,7 @@
-import { useTheme } from '../../context/ThemeContext';
 import { Viewer } from '@toast-ui/react-editor';
 import classNames from 'classnames';
 import { useMemo, type FC } from 'react';
+import { useTheme } from '../../context/ThemeContext';
 import './styles.scss';
 
 interface MarkdownViewerProps {

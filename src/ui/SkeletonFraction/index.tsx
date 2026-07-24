@@ -1,5 +1,5 @@
-import SkeletonText from '../SkeletonText';
 import type { FC } from 'react';
+import SkeletonText from '../SkeletonText';
 
 const SkeletonFraction: FC = () => {
   return (

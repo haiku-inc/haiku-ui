@@ -1,8 +1,8 @@
+import type { FC } from 'react';
 import CardButtonLeft from '../../assets/images/card/button-left.svg';
 import CardButtonRight from '../../assets/images/card/button-right.svg';
 import SkeletonBlock from '../SkeletonBlock';
 import Thumbnail from '../Thumbnail';
-import type { FC } from 'react';
 
 const CardIsleSkeleton: FC = () => (
   <div className="w-75 h-96.25 shrink-0">

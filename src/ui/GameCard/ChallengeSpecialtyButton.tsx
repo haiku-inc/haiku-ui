@@ -1,4 +1,4 @@
-import type { ChallengeSpecialty, Specialty } from '../../types';
+import type { FC, ReactNode } from 'react';
 import CardButtonLeftDefensive from '../../assets/images/card/button-left-defensive.svg';
 import CardButtonLeftForensic from '../../assets/images/card/button-left-forensic.svg';
 import CardButtonLeftOffensive from '../../assets/images/card/button-left-offensive.svg';
@@ -8,7 +8,7 @@ import DefensiveIcon from '../../assets/unicons/specialty/defensive.svg';
 import ForensicIcon from '../../assets/unicons/specialty/forensic.svg';
 import OffensiveIcon from '../../assets/unicons/specialty/offensive.svg';
 import RedBlueIcon from '../../assets/unicons/specialty/redblue.svg';
-import type { FC, ReactNode } from 'react';
+import type { ChallengeSpecialty, Specialty } from '../../types';
 
 export interface Props {
   specialty: Specialty | ChallengeSpecialty;

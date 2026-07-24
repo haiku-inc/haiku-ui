@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useTheme } from '../../context/ThemeContext';
 import chart from '@toast-ui/editor-plugin-chart';
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight';
 import tableMergedCell from '@toast-ui/editor-plugin-table-merged-cell';
@@ -8,6 +7,7 @@ import type { EditorProps } from '@toast-ui/react-editor';
 import { Editor } from '@toast-ui/react-editor';
 import classNames from 'classnames';
 import { useEffect, useRef, type FC } from 'react';
+import { useTheme } from '../../context/ThemeContext';
 import './styles.scss';
 
 /**

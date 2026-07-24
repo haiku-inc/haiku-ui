@@ -1,9 +1,9 @@
-import SkeletonBlock from '../SkeletonBlock';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, JSX, KeyboardEvent, PropsWithChildren, Ref } from 'react';
 import { useState } from 'react';
+import SkeletonBlock from '../SkeletonBlock';
 import './styles.scss';
 
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {

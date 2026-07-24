@@ -1,7 +1,7 @@
-import Cell from '../Table/Cell';
 import type { TableCellProps } from '@mui/material';
 import classNames from 'classnames';
 import type { FC } from 'react';
+import Cell from '../Table/Cell';
 
 interface Props extends TableCellProps {
   value: boolean;

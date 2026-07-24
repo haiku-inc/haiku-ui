@@ -1,8 +1,8 @@
+import type { CSSProperties, FC, PropsWithChildren } from 'react';
 import defaultBadge from '../../assets/images/default-haiku-hex.png';
 import Loading from '../Loading';
 import SkeletonText from '../SkeletonText';
 import Tooltip from '../Tooltip';
-import type { CSSProperties, FC, PropsWithChildren } from 'react';
 import './styles.scss';
 
 interface Props {

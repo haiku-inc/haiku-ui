@@ -1,7 +1,7 @@
-import { enterKeyDown } from '../utils/keyboard';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 import type { FC } from 'react';
 import { useState } from 'react';
+import { enterKeyDown } from '../utils/keyboard';
 
 interface Props {
   title: string;

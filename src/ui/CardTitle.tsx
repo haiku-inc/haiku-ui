@@ -1,6 +1,6 @@
-import type { ChallengeType } from '../types';
-import CardTitleUniversal from '../assets/images/card/title-universal.svg';
 import classNames from 'classnames';
+import CardTitleUniversal from '../assets/images/card/title-universal.svg';
+import type { ChallengeType } from '../types';
 
 interface CardTitleProps {
   type: ChallengeType | 'roadmap' | 'article' | 'trustnoone';
