@@ -1,0 +1,4 @@
+npm run lint-staged
+npm run check-types
+npm version patch --no-git-tag-version
+git add package.json package-lock.json
