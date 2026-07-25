@@ -139,4 +139,3 @@ const RadialGaugeChart: FC<Props> = ({ total, occupied, sections, scaleDigitsMar
 };
 
 export default RadialGaugeChart;
-export type { Props };

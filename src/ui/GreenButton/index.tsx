@@ -46,4 +46,3 @@ const GreenButton: FC<PropsWithChildren<GreenButtonProps>> = ({
 );
 
 export default GreenButton;
-export type { GreenButtonProps };

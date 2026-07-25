@@ -37,7 +37,7 @@ interface Props {
   isShortView?: boolean;
 }
 
-enum CompletionStatus {
+enum GameCardCompletionStatus {
   NOT_STARTED = 0,
   PAUSED = 1,
   COMPLETED = 2,
@@ -174,4 +174,4 @@ const GameCard: FC<Props> = ({
 };
 
 export default GameCard;
-export { CompletionStatus, GameCardSkeleton };
+export { ChallengeSpecialtyButton, GameCardCompletionStatus, GameCardSkeleton };

@@ -11,7 +11,7 @@ import type { ChallengeSpecialty, ChallengeType, RoadmapProgress, Specialty } fr
 import { defaultBackground } from '../../utils/layout';
 import { useNavigate } from '../../utils/router';
 import CardTitle from '../CardTitle';
-import ChallengeSpecialtyButton from '../GameCard/ChallengeSpecialtyButton';
+import { ChallengeSpecialtyButton } from '../GameCard';
 import Pill from '../Pill';
 import Progress from '../Progress';
 import Thumbnail from '../Thumbnail';
@@ -45,12 +45,6 @@ interface Props {
   isHaikuDeveloped?: boolean;
   difficulty?: string;
   category?: ChallengeSpecialty;
-}
-
-enum CompletionStatus {
-  NOT_STARTED = 0,
-  PAUSED = 1,
-  COMPLETED = 2,
 }
 
 const CardIsle: FC<Props> = ({
@@ -247,4 +241,4 @@ const CardIsle: FC<Props> = ({
 };
 
 export default CardIsle;
-export { CompletionStatus, CardIsleSkeleton as GameCardSkeleton };
+export { CardIsleSkeleton };
