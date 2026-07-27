@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface Props {
   title: string;
@@ -10,11 +9,7 @@ interface Props {
 const PageTitle: FC<Props> = ({ title, subtitle }) => {
   const projectName = import.meta.env.VITE_REACT_APP_PROJECT_NAME;
   const documentTitle = `${title} | ${subtitle ? `${subtitle} | ` : ''}${projectName}`;
-  return (
-    <Helmet>
-      <title>{documentTitle}</title>
-    </Helmet>
-  );
+  return <title>{documentTitle}</title>;
 };
 
 export default PageTitle;
