@@ -32,12 +32,6 @@
     "@mui/material": "9.2.0",
     "@mui/x-date-pickers": "9.9.0",
     "@tailwindcss/vite": "4.3.2",
-    "@toast-ui/editor": "3.2.2",
-    "@toast-ui/editor-plugin-chart": "3.0.1",
-    "@toast-ui/editor-plugin-code-syntax-highlight": "3.1.0",
-    "@toast-ui/editor-plugin-table-merged-cell": "3.1.0",
-    "@toast-ui/editor-plugin-uml": "3.0.1",
-    "@toast-ui/react-editor": "3.2.3",
     "@types/node": "26.1.1",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
@@ -79,13 +73,7 @@
     "react": ">=19",
     "react-dom": ">=19",
     "react-helmet-async": ">=3",
-    "tailwindcss": ">=4",
-    "@toast-ui/editor": ">=3",
-    "@toast-ui/editor-plugin-chart": ">=3",
-    "@toast-ui/editor-plugin-code-syntax-highlight": ">=3",
-    "@toast-ui/editor-plugin-table-merged-cell": ">=3",
-    "@toast-ui/editor-plugin-uml": ">=3",
-    "@toast-ui/react-editor": ">=3"
+    "tailwindcss": ">=4"
   },
   "scripts": {
     "dev": "vite",
