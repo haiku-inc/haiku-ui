@@ -34,5 +34,6 @@ export type { HeadCell } from './Table';
 export { default as Tabs } from './Tabs';
 export { default as TemporaryDialog } from './TemporaryDialog';
 export { default as Text } from './Text';
+export { default as ThemeToggle } from './ThemeToggle';
 export { default as Thumbnail } from './Thumbnail';
 export { default as Tooltip } from './Tooltip';
