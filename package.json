@@ -1,6 +1,5 @@
 {
   "name": "haiku-ui",
-  "private": false,
   "version": "1.0.7",
   "description": "UI elements and styles for Haiku products",
   "repository": {
@@ -24,7 +23,7 @@
     "email": "const@nazarenko.es"
   },
   "type": "module",
-  "main": "src/index.ts",
+  "main": "./dist/index.umd.js",
   "devDependencies": {
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
@@ -60,6 +59,7 @@
     "react-dom": "19.2.8",
     "react-helmet-async": "3.0.0",
     "react-router-dom": "7.18.1",
+    "tailwindcss": "4.3.3",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "8.64.0",
     "sass-embedded": "1.100.0",
@@ -69,22 +69,23 @@
     "vitest": "4.1.10"
   },
   "peerDependencies": {
-    "@emotion/react": ">=11",
-    "@emotion/styled": ">=11",
-    "@mui/icons-material": ">=9",
-    "@mui/material": ">=9",
-    "classnames": ">=2",
-    "dayjs": ">=1",
-    "react": ">=19",
-    "react-dom": ">=19",
-    "react-helmet-async": ">=3",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@mui/icons-material": "*",
+    "@mui/material": "*",
+    "@mui/x-date-pickers": "*",
+    "classnames": "*",
+    "dayjs": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-helmet-async": "*",
     "tailwindcss": ">=4",
-    "@toast-ui/editor": ">=3",
-    "@toast-ui/editor-plugin-chart": ">=3",
-    "@toast-ui/editor-plugin-code-syntax-highlight": ">=3",
-    "@toast-ui/editor-plugin-table-merged-cell": ">=3",
-    "@toast-ui/editor-plugin-uml": ">=3",
-    "@toast-ui/react-editor": ">=3"
+    "@toast-ui/editor": "*",
+    "@toast-ui/editor-plugin-chart": "*",
+    "@toast-ui/editor-plugin-code-syntax-highlight": "*",
+    "@toast-ui/editor-plugin-table-merged-cell": "*",
+    "@toast-ui/editor-plugin-uml": "*",
+    "@toast-ui/react-editor": "*"
   },
   "scripts": {
     "dev": "vite",
