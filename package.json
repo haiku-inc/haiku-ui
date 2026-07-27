@@ -1,7 +1,7 @@
 {
   "name": "haiku-ui",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "UI elements and styles for Haiku products",
   "repository": {
     "type": "git",
