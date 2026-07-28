@@ -1,7 +1,7 @@
-import { TaskAlt } from '@mui/icons-material';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
+import SuccessIcon from '../../assets/unicons/service/success.svg';
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ const Success: FC<PropsWithChildren<Props>> = ({ children, className, isCollapsi
       })}
       onClick={_isCollapsible ? () => setCollapsed((prev) => !prev) : undefined}
     >
-      <TaskAlt />
+      <SuccessIcon style={{ width: '24px' }} />
       <div className={classNames('text-block-success-content', { 'line-clamp-1': collapsed })}>{children}</div>
     </div>
   );

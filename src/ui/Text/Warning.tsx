@@ -1,7 +1,7 @@
-import { WarningAmberOutlined } from '@mui/icons-material';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
+import WarningIcon from '../../assets/unicons/service/warning.svg';
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ const Warning: FC<PropsWithChildren<Props>> = ({ children, className, isCollapsi
       })}
       onClick={_isCollapsible ? () => setCollapsed((prev) => !prev) : undefined}
     >
-      <WarningAmberOutlined />
+      <WarningIcon />
       <div className={classNames('text-block-warning-content', { 'line-clamp-1': collapsed })}>{children}</div>
     </div>
   );

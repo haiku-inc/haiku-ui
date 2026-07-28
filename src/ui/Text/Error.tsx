@@ -1,7 +1,7 @@
-import { ErrorOutlineOutlined } from '@mui/icons-material';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
+import ErrorIcon from '../../assets/unicons/service/error.svg';
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ const Error: FC<PropsWithChildren<Props>> = ({ children, className, isCollapsibl
       })}
       onClick={_isCollapsible ? () => setCollapsed((prev) => !prev) : undefined}
     >
-      <ErrorOutlineOutlined />
+      <ErrorIcon />
       <div className={classNames('text-block-error-content', { 'line-clamp-1': collapsed })}>{children}</div>
     </div>
   );

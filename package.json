@@ -28,7 +28,6 @@
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@eslint/js": "10.0.1",
-    "@mui/icons-material": "9.2.0",
     "@mui/material": "9.2.0",
     "@mui/x-date-pickers": "9.9.0",
     "@tailwindcss/vite": "4.3.2",
@@ -64,7 +63,6 @@
   "peerDependencies": {
     "@emotion/react": ">=11",
     "@emotion/styled": ">=11",
-    "@mui/icons-material": ">=9",
     "@mui/material": ">=9",
     "@mui/x-date-pickers": ">=9",
     "classnames": ">=2",

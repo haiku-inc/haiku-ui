@@ -1,25 +1,27 @@
-import StarIcon from '@mui/icons-material/Star';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
-import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import { Typography } from '@mui/material';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import { useRef, useState } from 'react';
+import FullStar from '../../assets/unicons/service/star-full.svg';
+import HalfStar from '../../assets/unicons/service/star-half.svg';
+import EmptyStar from '../../assets/unicons/service/star.svg';
 import './styles.scss';
 
 interface RatingStarsProps {
   rating: number;
   rates?: number;
+  starWidth?: string;
   isEditable?: boolean;
   onClick?: (rate: number) => void;
 }
 
-const RatingStars: FC<RatingStarsProps> = ({ rating, rates, isEditable = false, onClick }) => {
+const RatingStars: FC<RatingStarsProps> = ({ rating, rates, isEditable = false, starWidth = '24px', onClick }) => {
   const [internalRating, setInternalRating] = useState<number>();
   const [isChanged, setIsChanged] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const color = isChanged ? 'var(--primary)' : 'var(--text-primary)';
+  const color = isChanged ? 'var(--tertiary)' : 'var(--text-primary)';
+  const width = starWidth;
 
   const handleChangeInternalRating = (rate: number) => {
     return () => {
@@ -53,15 +55,15 @@ const RatingStars: FC<RatingStarsProps> = ({ rating, rates, isEditable = false, 
     // const emptyStars = 5 - fullStars - halfStars;
 
     for (let i = 0; i < 5; i++) {
-      let star = <StarOutlinedIcon style={{ color }} />;
+      let star = <EmptyStar style={{ color, width }} />;
       if (isEditable && internalRating !== undefined && i <= internalRating) {
-        star = <StarIcon style={{ color: 'var(--primary)' }} />;
+        star = <FullStar style={{ color: 'var(--primary)', width }} />;
       } else if (isEditable && internalRating !== undefined) {
-        star = <StarOutlinedIcon style={{ color: 'var(--primary)' }} />;
+        star = <EmptyStar style={{ color: 'var(--primary)', width }} />;
       } else if (i < fullStars) {
-        star = <StarIcon style={{ color }} />;
-      } else if (i < halfStars) {
-        star = <StarHalfIcon style={{ color }} />;
+        star = <FullStar style={{ color, width }} />;
+      } else if (i < fullStars + halfStars) {
+        star = <HalfStar style={{ color, width }} />;
       }
       if (isEditable) {
         stars.push(

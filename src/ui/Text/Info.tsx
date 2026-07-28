@@ -1,7 +1,7 @@
-import { InfoOutlined } from '@mui/icons-material';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
+import InfoIcon from '../../assets/unicons/service/info.svg';
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ const Info: FC<PropsWithChildren<Props>> = ({ children, className, isCollapsible
       })}
       onClick={_isCollapsible ? () => setCollapsed((prev) => !prev) : undefined}
     >
-      <InfoOutlined />
+      <InfoIcon />
       <div className={classNames('text-block-info-content', { 'line-clamp-1': collapsed })}>{children}</div>
     </div>
   );

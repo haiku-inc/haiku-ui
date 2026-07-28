@@ -1,4 +1,3 @@
-import { EngineeringOutlined, PersonOutlined, StarBorder, Verified } from '@mui/icons-material';
 import { Link } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, MouseEvent, ReactElement } from 'react';
@@ -6,12 +5,12 @@ import { useMemo } from 'react';
 import CardButtonLeft from '../../assets/images/card/button-left-defensive.svg';
 import CardButtonRight from '../../assets/images/card/button-right.svg';
 import HaikuIncLogo from '../../assets/unicons/haiku-inc.svg';
+import VerifiedIcon from '../../assets/unicons/service/verified.svg';
 import type { ChallengeSpecialty, ChallengeType, RoadmapProgress, Specialty } from '../../types';
 import { defaultBackground } from '../../utils/layout';
 import { useNavigate } from '../../utils/router';
 import CardTitle from '../CardTitle';
 import { ChallengeSpecialtyButton } from '../GameCard';
-import Pill from '../Pill';
 import Progress from '../Progress';
 import Thumbnail from '../Thumbnail';
 import Tooltip from '../Tooltip';
@@ -51,7 +50,6 @@ const CardIsle: FC<Props> = ({
   badgeURL,
   badge,
   type,
-  specialty,
   subtype,
   isCompleted,
   url,
@@ -60,8 +58,6 @@ const CardIsle: FC<Props> = ({
   onRightButtonClick,
   name,
   isBadgeShown,
-  rating,
-  author,
   onCallToActionClick,
   callToActionCaption,
   description,
@@ -119,7 +115,7 @@ const CardIsle: FC<Props> = ({
           {isCompleted && (
             <Tooltip title="You already completed this" description="But you may go through again.">
               <div className="completion-status">
-                <Verified className="completed" color="success" />
+                <VerifiedIcon className="completed" style={{ color: 'var(--text-success)' }} />
               </div>
             </Tooltip>
           )}
@@ -152,18 +148,7 @@ const CardIsle: FC<Props> = ({
             </div>
           )}
 
-          <div
-            className={classNames('card-content w-full', {
-              '-bottom-13': hasButton,
-              '-bottom-31': !hasButton,
-            })}
-          >
-            <div className="info-stripe">
-              {!!rating && <Pill icon={<StarBorder />} label={rating.toString()} />}
-              {!!specialty && <Pill icon={<EngineeringOutlined />} label={specialty} />}
-              {!!author && <Pill icon={<PersonOutlined />} label={author} />}
-            </div>
-
+          <div className="card-content" style={{ bottom: !hasButton ? '-124px' : '-52px' }}>
             {!!description && (
               <div
                 className={classNames('description', {

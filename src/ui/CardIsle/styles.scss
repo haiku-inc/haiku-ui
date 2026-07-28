@@ -11,14 +11,15 @@
 
   .completion-status {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 5px;
     filter: drop-shadow(0 0 5px var(--shadow-dark));
-    z-index: 1;
+    opacity: 85%;
+    z-index: 2;
 
     .paused,
     .completed {
-      font-size: 3rem;
+      width: 3rem;
       filter: drop-shadow(0 0 2px var(--shadow-dark));
     }
   }
@@ -91,6 +92,7 @@
 
     .card-content {
       position: absolute;
+      width: 100%;
     }
 
     .info-stripe {

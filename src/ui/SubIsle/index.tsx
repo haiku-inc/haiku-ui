@@ -1,8 +1,8 @@
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, JSX, KeyboardEvent, PropsWithChildren, Ref } from 'react';
 import { useState } from 'react';
+import ExpandIcon from '../../assets/unicons/service/expand.svg';
 import SkeletonBlock from '../SkeletonBlock';
 import './styles.scss';
 
@@ -70,7 +70,7 @@ const SubIsle: FC<PropsWithChildren<Props>> = ({
         'is-expanded': expanded,
       })}
     >
-      {title && (
+      {(title || isFoldable) && (
         <div
           className="sub-isle-title"
           onClick={isFoldable ? toggleExpanded : undefined}
@@ -79,7 +79,7 @@ const SubIsle: FC<PropsWithChildren<Props>> = ({
           tabIndex={isFoldable ? 0 : undefined}
         >
           {title}
-          {isFoldable && <ExpandMore className="sub-isle-expand-icon" />}
+          {isFoldable && <ExpandIcon className="sub-isle-expand-icon" />}
         </div>
       )}
       {subtitle && (

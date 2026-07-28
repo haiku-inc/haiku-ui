@@ -1,10 +1,10 @@
-import VerifiedIcon from '@mui/icons-material/Verified';
 import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
 import type { FC, ReactNode } from 'react';
 import CardButtonRight from '../../assets/images/card/button-right.svg';
 import LinuxIcon from '../../assets/unicons/os/linux.svg';
 import WindowsIcon from '../../assets/unicons/os/windows.svg';
+import VerifiedIcon from '../../assets/unicons/service/verified.svg';
 import type { ChallengeType, LearningObjectives, OperatingSystem, Specialty } from '../../types';
 import { defaultBackground } from '../../utils/layout';
 import { useNavigate } from '../../utils/router';
@@ -83,7 +83,7 @@ const GameCard: FC<Props> = ({
           {isCompleted && (
             <Tooltip title="You already completed this game" description="But you may go through again.">
               <div className="completion-status">
-                <VerifiedIcon className="completed" color="success" />
+                <VerifiedIcon className="completed" />
               </div>
             </Tooltip>
           )}
@@ -123,7 +123,7 @@ const GameCard: FC<Props> = ({
         <Typography variant="h4" className="mt-4!">
           {isCompleted && (
             <Tooltip title="You already completed this game" description="But you may go through again.">
-              <VerifiedIcon className="completed mr-2 mb-1" color="success" />
+              <VerifiedIcon className="text-(--text-success) mr-2 mb-1" style={{ width: '24px', display: 'inline' }} />
             </Tooltip>
           )}
           {name}
