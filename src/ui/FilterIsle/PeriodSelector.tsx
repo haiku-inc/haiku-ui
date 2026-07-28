@@ -1,9 +1,9 @@
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
-import { IconButton, MenuItem, TextField } from '@mui/material';
+import { MenuItem, TextField } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from 'dayjs';
 import type { ChangeEvent, FC } from 'react';
 import { useState } from 'react';
+import ResetButton from './ResetButton';
 
 interface PeriodSelectorProps {
   startDate: string | null;
@@ -143,9 +143,7 @@ const PeriodSelector: FC<PeriodSelectorProps> = ({
       />
 
       {((startDate && startDate !== defaultStartDate) || (endDate && endDate !== defaultEndDate)) && (
-        <IconButton aria-label="clear" onClick={handlePeriodReset} className="width-40 height-40" color="info">
-          <CancelPresentationIcon />
-        </IconButton>
+        <ResetButton onClick={handlePeriodReset} />
       )}
     </div>
   );

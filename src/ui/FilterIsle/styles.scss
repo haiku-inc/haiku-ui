@@ -12,4 +12,31 @@
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
+
+  .filter-isle-reset-button {
+    color: var(--tertiary);
+
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: oklch(from var(--tertiary) l c h / 0.1);
+    }
+
+    &:active > svg {
+      scale: 95%;
+    }
+
+    > svg {
+      border: 1px solid var(--tertiary);
+      border-radius: 5px;
+      aspect-ratio: 1 / 1;
+      width: 24px;
+    }
+  }
 }

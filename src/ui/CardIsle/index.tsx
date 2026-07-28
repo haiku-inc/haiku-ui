@@ -1,5 +1,4 @@
-import { EngineeringOutlined, PersonOutlined, StarBorder } from '@mui/icons-material';
-import VerifiedIcon from '@mui/icons-material/Verified';
+import { EngineeringOutlined, PersonOutlined, StarBorder, Verified } from '@mui/icons-material';
 import { Link } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, MouseEvent, ReactElement } from 'react';
@@ -120,7 +119,7 @@ const CardIsle: FC<Props> = ({
           {isCompleted && (
             <Tooltip title="You already completed this" description="But you may go through again.">
               <div className="completion-status">
-                <VerifiedIcon className="completed" color="success" />
+                <Verified className="completed" color="success" />
               </div>
             </Tooltip>
           )}

@@ -1,15 +1,14 @@
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
-import { IconButton } from '@mui/material';
 import type { FC, MouseEvent } from 'react';
+import CloseIcon from '../../assets/unicons/service/close.svg';
 
 interface Props {
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
 const InputDebouncedSearch: FC<Props> = ({ onClick }) => (
-  <IconButton onClick={onClick} color="info">
-    <CancelPresentationIcon className="w-6! h-6!" />
-  </IconButton>
+  <button onClick={onClick} className="filter-isle-reset-button">
+    <CloseIcon />
+  </button>
 );
 
 export default InputDebouncedSearch;

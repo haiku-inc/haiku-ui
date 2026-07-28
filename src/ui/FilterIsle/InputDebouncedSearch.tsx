@@ -1,7 +1,7 @@
-import FindReplaceIcon from '@mui/icons-material/FindReplace';
-import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField } from '@mui/material';
 import { useEffect, useState, type ChangeEventHandler, type FC } from 'react';
+import SearchActiveIcon from '../../assets/unicons/service/search-active.svg';
+import SearchIcon from '../../assets/unicons/service/search.svg';
 import SkeletonBlock from '../SkeletonBlock';
 
 interface Props {
@@ -50,7 +50,8 @@ const InputDebouncedSearch: FC<Props> = ({
     <TextField
       label="Search"
       size="small"
-      className={`w-50 ${className || ''}`}
+      className={className}
+      style={{ width: '200px' }}
       value={searchName || ''}
       onChange={handleSearch}
       helperText={helperText}
@@ -60,7 +61,11 @@ const InputDebouncedSearch: FC<Props> = ({
         input: {
           startAdornment: (
             <InputAdornment position="start">
-              {searchName !== debouncedSearchName ? <FindReplaceIcon color="info" /> : <SearchIcon />}
+              {searchName !== debouncedSearchName ? (
+                <SearchActiveIcon style={{ with: '20px', height: '20px', color: 'var(--tertiary)' }} />
+              ) : (
+                <SearchIcon style={{ with: '20px', height: '20px' }} />
+              )}
             </InputAdornment>
           ),
         },
