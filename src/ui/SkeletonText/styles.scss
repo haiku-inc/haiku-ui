@@ -1,11 +1,13 @@
 .skeleton-text {
-  display: inline-block !important;
-  background: var(--text-faded) !important;
-  border-radius: 5px !important;
-  height: 14px !important;
-  transform: none !important;
+  display: inline-block;
+  background: var(--text-faded);
+  border-radius: 5px;
+  height: 14px;
+  line-height: 14px;
+  transform: none;
+  margin: 0 0 0 0 !important;
 
   &.is-header {
-    height: 28px !important;
+    height: 28px;
   }
 }
