@@ -24,9 +24,9 @@
 
   --floater-bg: #ffffff;
   --floater-bg-item: #ffffff;
-  --floater-bg-item-hover: color-mix(in oklab, var(--primary) 25%, transparent);
+  --floater-bg-item-hover: color-mix(in oklab, var(--secondary) 25%, transparent);
   --floater-bg-item-highlighted: color-mix(in oklab, var(--primary) 25%, transparent);
-  --floater-bg-item-highlighted-hover: var(--secondary);
+  --floater-bg-item-highlighted-hover: color-mix(in oklab, var(--secondary) 30%, transparent);
   --floater-border: color-mix(in oklab, var(--primary) 25%, transparent);
 
   --background-terminal: #fafafc;
@@ -132,9 +132,9 @@
 
   --floater-bg: #000017;
   --floater-bg-item: #000017;
-  --floater-bg-item-hover: #151934;
-  --floater-bg-item-highlighted: color-mix(in oklab, var(--secondary) 20%, transparent);
-  --floater-bg-item-highlighted-hover: var(--secondary);
+  --floater-bg-item-hover: color-mix(in oklab, var(--secondary) 20%, transparent);
+  --floater-bg-item-highlighted: color-mix(in oklab, var(--tertiary) 20%, transparent);
+  --floater-bg-item-highlighted-hover: color-mix(in oklab, var(--secondary) 25%, transparent);
   --floater-border: color-mix(in oklab, var(--primary) 25%, transparent);
 
   --background-terminal: #23272f;

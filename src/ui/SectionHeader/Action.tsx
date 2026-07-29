@@ -27,7 +27,10 @@ const Action: FC<Props> = ({
     size="small"
     color={color}
     variant={variant}
-    onClick={onClick}
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick?.();
+    }}
     startIcon={startIcon}
     endIcon={endIcon}
     disabled={disabled}
