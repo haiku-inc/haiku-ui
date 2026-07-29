@@ -80,14 +80,11 @@ const fontsCairo = ['Cairo', ...fontsDefault].join(',');
 
 const fontsInconsolata = ['Inconsolata', ...fontsDefault].join(',');
 
-// @ts-expect-error this is a placeholder for future use
-const _fontsEconomica = ['Economica', ...fontsDefault].join(',');
+const fontsEconomica = ['Economica', ...fontsDefault].join(',');
 
-// @ts-expect-error this is a placeholder for future use
-const _fontsBebas = ['Bebas Neue', ...fontsDefault].join(',');
+const fontsBebas = ['Bebas Neue', ...fontsDefault].join(',');
 
-// @ts-expect-error this is a placeholder for future use
-const _fontsOxanium = ['Oxanium', ...fontsDefault].join(',');
+const fontsOxanium = ['Oxanium', ...fontsDefault].join(',');
 
 const fontsOpenSans = ['Open Sans', ...fontsDefault].join(',');
 
@@ -458,7 +455,7 @@ const defaultPalette: HaikuTheme = {
   typography: {
     h1: {
       fontSize: 40,
-      fontFamily: fontsRajdhani,
+      fontFamily: fontsOxanium,
       fontWeight: 600,
     },
     h2: {
@@ -493,7 +490,7 @@ const defaultPalette: HaikuTheme = {
     },
     body2: {
       fontSize: 14,
-      fontFamily: fontsOpenSans,
+      fontFamily: fontsEconomica,
       fontWeight: 400,
     },
     subtitle1: {
@@ -513,7 +510,7 @@ const defaultPalette: HaikuTheme = {
     },
     caption: {
       fontSize: 12,
-      fontFamily: fontsOpenSans,
+      fontFamily: fontsBebas,
       fontWeight: 400,
     },
     button: {
