@@ -6,6 +6,9 @@
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -21,7 +24,7 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
 
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite/client", "vite-plugin-svgr/client"]
   },
   "envDir": "env",
   "include": ["**/*.ts", "**/*.tsx", "declarations.d.ts"],

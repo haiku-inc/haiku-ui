@@ -80,10 +80,13 @@ const fontsCairo = ['Cairo', ...fontsDefault].join(',');
 
 const fontsInconsolata = ['Inconsolata', ...fontsDefault].join(',');
 
+// @ts-expect-error this is a placeholder for future use
 const _fontsEconomica = ['Economica', ...fontsDefault].join(',');
 
+// @ts-expect-error this is a placeholder for future use
 const _fontsBebas = ['Bebas Neue', ...fontsDefault].join(',');
 
+// @ts-expect-error this is a placeholder for future use
 const _fontsOxanium = ['Oxanium', ...fontsDefault].join(',');
 
 const fontsOpenSans = ['Open Sans', ...fontsDefault].join(',');
