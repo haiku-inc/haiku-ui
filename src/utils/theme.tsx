@@ -73,19 +73,12 @@ const fontsDefault = [
 ];
 
 const fontsRajdhani = ['Rajdhani', ...fontsDefault].join(',');
-
 const fontsOrbitron = ['Orbitron', ...fontsDefault].join(',');
-
 const fontsCairo = ['Cairo', ...fontsDefault].join(',');
-
 const fontsInconsolata = ['Inconsolata', ...fontsDefault].join(',');
-
 const fontsEconomica = ['Economica', ...fontsDefault].join(',');
-
 const fontsBebas = ['Bebas Neue', ...fontsDefault].join(',');
-
 const fontsOxanium = ['Oxanium', ...fontsDefault].join(',');
-
 const fontsOpenSans = ['Open Sans', ...fontsDefault].join(',');
 
 const LinkBehavior = forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, 'to'> & { href: RouterLinkProps['to'] }>(
@@ -453,75 +446,20 @@ const defaultPalette: HaikuTheme = {
     },
   },
   typography: {
-    h1: {
-      fontSize: 40,
-      fontFamily: fontsOxanium,
-      fontWeight: 600,
-    },
-    h2: {
-      fontSize: 32,
-      fontFamily: fontsRajdhani,
-      fontWeight: 600,
-    },
-    h3: {
-      fontSize: 24,
-      fontFamily: fontsRajdhani,
-      fontWeight: 500,
-    },
-    h4: {
-      fontSize: 22,
-      fontFamily: fontsRajdhani,
-      fontWeight: 500,
-    },
-    h5: {
-      fontSize: 20,
-      fontFamily: fontsRajdhani,
-      fontWeight: 500,
-    },
-    h6: {
-      fontSize: 18,
-      fontFamily: fontsRajdhani,
-      fontWeight: 500,
-    },
-    body1: {
-      fontSize: 16,
-      fontFamily: fontsOpenSans,
-      fontWeight: 400,
-    },
-    body2: {
-      fontSize: 14,
-      fontFamily: fontsEconomica,
-      fontWeight: 400,
-    },
-    subtitle1: {
-      fontSize: 16,
-      fontFamily: fontsOrbitron,
-      fontWeight: 500,
-    },
-    subtitle2: {
-      fontSize: 14,
-      fontFamily: fontsCairo,
-      fontWeight: 500,
-    },
-    overline: {
-      fontSize: 12,
-      fontFamily: fontsOpenSans,
-      fontWeight: 400,
-    },
-    caption: {
-      fontSize: 12,
-      fontFamily: fontsBebas,
-      fontWeight: 400,
-    },
-    button: {
-      fontFamily: fontsRajdhani,
-      fontWeight: 600,
-    },
-    mono: {
-      fontSize: 16,
-      fontFamily: fontsInconsolata,
-      fontWeight: 500,
-    },
+    h1: { fontSize: 40, fontFamily: fontsOxanium, fontWeight: 600 },
+    h2: { fontSize: 32, fontFamily: fontsRajdhani, fontWeight: 600 },
+    h3: { fontSize: 24, fontFamily: fontsRajdhani, fontWeight: 500 },
+    h4: { fontSize: 22, fontFamily: fontsRajdhani, fontWeight: 500 },
+    h5: { fontSize: 20, fontFamily: fontsRajdhani, fontWeight: 500 },
+    h6: { fontSize: 18, fontFamily: fontsEconomica, fontWeight: 500 },
+    body1: { fontSize: 16, fontFamily: fontsRajdhani, fontWeight: 500 },
+    body2: { fontSize: 14, fontFamily: fontsRajdhani, fontWeight: 500 },
+    subtitle1: { fontSize: 16, fontFamily: fontsOrbitron, fontWeight: 500 },
+    subtitle2: { fontSize: 14, fontFamily: fontsCairo, fontWeight: 500 },
+    overline: { fontSize: 12, fontFamily: fontsOpenSans, fontWeight: 400 },
+    caption: { fontSize: 12, fontFamily: fontsBebas, fontWeight: 400 },
+    button: { fontFamily: fontsRajdhani, fontWeight: 600 },
+    mono: { fontSize: 16, fontFamily: fontsInconsolata, fontWeight: 500 },
   },
 };
 
