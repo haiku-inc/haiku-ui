@@ -9,6 +9,7 @@ export { default as Floater } from './Floater';
 export { ChallengeSpecialtyButton, default as GameCard, GameCardCompletionStatus, GameCardSkeleton } from './GameCard';
 export { default as GradientCircularProgress } from './GradientCircularProgress';
 export { default as GreenButton } from './GreenButton';
+export { default as InputDebounced } from './InputDebounced';
 export { default as Isle } from './Isle';
 export { default as LazyImage } from './LazyImage';
 export { default as LazySection } from './LazySection';

@@ -1,0 +1,15 @@
+.filter-isle-box {
+  background-color: var(--background-app-header);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 10px;
+  width: 100%;
+
+  &[data-stuck] {
+    padding: 5px 2px 2px 2px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
