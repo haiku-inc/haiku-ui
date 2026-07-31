@@ -1,3 +1,11 @@
+.floater-anchor {
+  line-height: 0;
+  cursor: context-menu;
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
 .floater-box {
   background-color: var(--floater-bg);
   border: 4px double var(--floater-border);
@@ -8,6 +16,9 @@
     background-color: var(--floater-bg-item);
     padding: 0.5rem 1rem;
 
+    &.disabled {
+      opacity: 65%;
+    }
     &.has-action {
       cursor: pointer;
     }

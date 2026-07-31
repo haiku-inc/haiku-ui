@@ -1,7 +1,11 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
   {
@@ -17,7 +21,14 @@ export default [
     ],
   },
   {files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
-  {languageOptions: { globals: globals.browser }},
+  {
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+      },
+    },
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,

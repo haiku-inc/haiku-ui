@@ -72,17 +72,10 @@
     "tailwindcss": ">=4"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "test": "vitest run",
-    "test:watch": "vitest",
     "lint": "eslint .",
-    "preview": "vite preview",
     "check-types": "tsc",
     "compile": "tsc -p .",
-    "predeploy": "npm run build",
     "prepare": "husky",
-    "start": "npm run dev",
     "update-interactive": "npm-check --update --save-exact",
     "lint-staged": "lint-staged",
     "lint:fix": "eslint src --fix",

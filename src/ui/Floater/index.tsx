@@ -7,10 +7,12 @@ import './styles.scss';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   className?: string;
+  menuClassName?: string;
   onClose?: () => void;
   isOpen?: boolean;
   button?: ReactElement;
   isSelfControlled?: boolean;
+  disabled?: boolean;
 }
 
 const Floater: FC<PropsWithChildren<Props>> = ({
@@ -18,8 +20,10 @@ const Floater: FC<PropsWithChildren<Props>> = ({
   button,
   isOpen,
   className,
+  menuClassName,
   isSelfControlled,
   onClose,
+  disabled,
   ...rest
 }) => {
   const anchorRef = useRef<HTMLDivElement>(null);
@@ -39,10 +43,10 @@ const Floater: FC<PropsWithChildren<Props>> = ({
     <>
       <div
         ref={anchorRef}
-        className="leading-0 cursor-context-menu "
+        className={classNames('floater-anchor', className, {disabled})}
         onClick={(e) => {
           e.stopPropagation();
-          if (isSelfControlled) {
+          if (!disabled && isSelfControlled) {
             setIsSelfOpen((prev) => !prev);
           }
         }}
@@ -69,7 +73,7 @@ const Floater: FC<PropsWithChildren<Props>> = ({
       >
         <div
           {...rest}
-          className={classNames('floater-box max-h-[60vh] overflow-auto', className)}
+          className={classNames('floater-box max-h-[60vh] overflow-auto', menuClassName)}
           onClick={!isSelfControlled ? undefined : handleClose}
         >
           {children}

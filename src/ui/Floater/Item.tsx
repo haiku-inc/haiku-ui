@@ -7,13 +7,14 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   isHighlighted?: boolean;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
   ref?: Ref<HTMLDivElement>;
+  disabled?: boolean;
 }
 
-const FloaterItem: FC<PropsWithChildren<Props>> = ({ children, isHighlighted, className, onClick, ...rest }) => (
+const FloaterItem: FC<PropsWithChildren<Props>> = ({ children, isHighlighted, className, onClick, disabled, ...rest }) => (
   <div
     {...rest}
-    className={classNames('floater-item', className, { 'has-action': !!onClick, 'is-highlighted': isHighlighted })}
-    onClick={onClick}
+    className={classNames('floater-item', className, { 'disabled': disabled, 'has-action': !!onClick, 'is-highlighted': isHighlighted })}
+    onClick={!disabled ? onClick : (e) => e.stopPropagation()}
   >
     {children}
   </div>
