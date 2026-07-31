@@ -43,7 +43,7 @@ const Floater: FC<PropsWithChildren<Props>> = ({
     <>
       <div
         ref={anchorRef}
-        className={classNames('floater-anchor', className, {disabled})}
+        className={classNames('floater-anchor', className, { disabled })}
         onClick={(e) => {
           e.stopPropagation();
           if (!disabled && isSelfControlled) {
