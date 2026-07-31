@@ -8,22 +8,28 @@
 }
 .floater-box {
   background-color: var(--floater-bg);
-  border: 4px double var(--floater-border);
+  border: 1px solid var(--floater-border);
   border-radius: 8px;
   width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 
   .floater-item {
     background-color: var(--floater-bg-item);
-    padding: 0.5rem 1rem;
+    padding: 4px 10px;
+    border-radius: 6px;
 
     &.disabled {
       opacity: 65%;
+      cursor: not-allowed;
     }
-    &.has-action {
+    &:not(.disabled).has-action {
       cursor: pointer;
     }
 
-    &:hover {
+    &:not(.disabled):hover {
       background-color: var(--floater-bg-item-hover);
     }
 

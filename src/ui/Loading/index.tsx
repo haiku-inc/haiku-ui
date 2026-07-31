@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import type { FC } from 'react';
-
 import './styles.scss';
 
 export interface LoadingProps {
