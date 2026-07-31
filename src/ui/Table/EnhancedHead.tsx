@@ -1,6 +1,6 @@
 import Checkbox from '@mui/material/Checkbox';
 import type { FC } from 'react';
-import Table from '../Table';
+import Table from './index';
 
 type HeadCell = {
   id: string;

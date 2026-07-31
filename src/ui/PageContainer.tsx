@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
-import SectionHeader from '../ui/SectionHeader';
+import SectionHeader from './SectionHeader';
 
 interface Props {
   title?: string;

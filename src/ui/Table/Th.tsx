@@ -1,6 +1,6 @@
 import type { TableCellProps } from '@mui/material';
 import type { FC, PropsWithChildren } from 'react';
-import Cell from '../Table/Cell';
+import Cell from './Cell';
 
 const Th: FC<PropsWithChildren<TableCellProps>> = ({ children, align, ...props }) => {
   return (
