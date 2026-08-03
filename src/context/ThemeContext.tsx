@@ -18,7 +18,6 @@ const ThemeContext = createContext<{
   applyOrgThemeColors: (themeColors: ThemeColors[]) => void;
 } | null>(null);
 
-// Edit this to change default theme (and css files - `main` and `toggle`)
 const DEFAULT_THEME = 'os-defined';
 
 const setDOMRootEditorTheme = (value: ThemeType) => {
@@ -34,17 +33,14 @@ const setDOMRootTheme = (value: ThemeType) => {
   setDOMRootEditorTheme(value);
 };
 
-const detectInitialTheme = (): ThemeType => {
+const detectInitialTheme = (defaultTheme?: ThemeType): ThemeType => {
   const storedValue = localStorage.getItem('theme');
   if (storedValue && (storedValue === 'light' || storedValue === 'dark' || storedValue === 'os-defined')) {
     setDOMRootTheme(storedValue);
     return storedValue;
   }
-  // Must sync <html> class with DEFAULT_THEME so CSS (:root.os-defined media queries) matches
-  // themeExplicit (derived from the same prefers-color-scheme). Otherwise charts/canvas read
-  // "dark" from context while :root:not(.os-defined, .dark) applies the light variable set.
-  setDOMRootTheme(DEFAULT_THEME);
-  return DEFAULT_THEME;
+  setDOMRootTheme(defaultTheme || DEFAULT_THEME);
+  return defaultTheme || DEFAULT_THEME;
 };
 
 const detectOSTheme = (): ThemeExplicitType =>
@@ -65,8 +61,8 @@ const useTheme = () => {
  */
 const useThemeExplicit = () => useTheme();
 
-const WithThemeContext: FC<PropsWithChildren> = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeType>(detectInitialTheme());
+const WithThemeContext: FC<PropsWithChildren<{ defaultTheme?: ThemeType }>> = ({ children, defaultTheme }) => {
+  const [theme, setTheme] = useState<ThemeType>(detectInitialTheme(defaultTheme));
   const [orgThemeColors, setOrgThemeColors] = useState<ThemeColors[]>([]);
 
   const detectThemeExplicit = (theme: ThemeType): ThemeExplicitType => {
@@ -123,7 +119,7 @@ const WithThemeContext: FC<PropsWithChildren> = ({ children }) => {
   };
 
   const resetTheme = () => {
-    switchTo(DEFAULT_THEME, true);
+    switchTo(defaultTheme || DEFAULT_THEME, true);
     setOrgThemeColors([]);
   };
 

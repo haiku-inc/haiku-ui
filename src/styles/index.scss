@@ -314,22 +314,23 @@
   --font-roboto: Roboto, Rajdhani, Courier, monospace;
 }
 
-:root.light,
-// Edit this to change default theme (and css file `toggle` and context var)
-:root:not(.os-defined, .dark) {
+// Explicitly Light
+:root.light {
   @include light-theme;
   @include mui-theme-reset;
   @include universal-colors;
 }
 
+// Explicitly Dark
 :root.dark {
   @include dark-theme;
   @include mui-theme-reset;
   @include universal-colors;
 }
 
-// OS Default.
-// Edit this to change default theme (and css file `toggle` and context var)
+// Implicit theme set (to os-defined) if no explicit theme is set.
+:root:not(.os-defined, .dark, .light),
+// Explicitly OS Default.
 :root.os-defined {
   @media (prefers-color-scheme: light) {
     @include light-theme;

@@ -35,23 +35,23 @@ For local development use `npm link` on this repo, then `npm link haiku-ui` on t
   --mui-palette-text-primary: var(--text-primary);
 }
 
-
-:root.light,
-// Edit this to change default theme (and css file `toggle` and context var)
-:root:not(.os-defined, .dark) {
+// Explicitly Light
+:root.light {
   @include custom-light-theme;
   @include custom-mui-theme-reset;
   @include custom-universal-colors;
 }
 
+// Explicitly Dark
 :root.dark {
   @include custom-dark-theme;
   @include custom-mui-theme-reset;
   @include custom-universal-colors;
 }
 
-// OS Default.
-// Edit this to change default theme (and css file `toggle` and context var)
+// Implicit theme set (to os-defined) if no explicit theme is set.
+:root:not(.os-defined, .dark, .light),
+// Explicitly OS Default.
 :root.os-defined {
   @media (prefers-color-scheme: light) {
     @include custom-light-theme;

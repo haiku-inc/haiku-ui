@@ -56,6 +56,7 @@
     }
   }
 
+  // Explicitly dark
   :root.dark & {
     --icon-fill: hsl(210deg 10% 70%);
     --icon-fill-hover-body: hsl(210deg 15% 90%);
@@ -92,9 +93,8 @@
     }
   }
 
-  :root.light &,
-  // Edit this to change default theme (and css file `main` and context var)
-  :root:not(.os-defined, .dark) & {
+  // Explicitly Light
+  :root.light & {
     .sun-and-moon > .stars {
       transform: scale(0.1);
       opacity: 0;
@@ -123,7 +123,9 @@
     }
   }
 
-  // Edit this to change default theme (and css file `main` and context var)
+  // Implicit theme set (to os-defined) if no explicit theme is set.
+  :root:not(.os-defined, .dark, .light) &,
+  // Explicitly OS Default.
   :root.os-defined & {
     --icon-fill: hsl(210deg 10% 70%);
     --icon-fill-hover-body: hsl(210deg 50% 25%);
