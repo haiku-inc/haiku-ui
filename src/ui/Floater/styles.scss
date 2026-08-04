@@ -6,6 +6,30 @@
     cursor: not-allowed;
   }
 }
+.floater-search-box {
+  background-color: var(--floater-bg);
+  border: 1px solid var(--floater-border);
+  border-bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  > input {
+    border: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: var(--floater-text);
+    font-size: var(--font-size-sm);
+    padding: 4px 10px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.floater-search-box + .floater-box {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 .floater-box {
   background-color: var(--floater-bg);
   border: 1px solid var(--floater-border);

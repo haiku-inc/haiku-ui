@@ -9,6 +9,8 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   menuClassName?: string;
   onClose?: () => void;
+  onSearchChange?: (value: string) => void;
+  onSearchEnter?: (value: string) => void;
   isOpen?: boolean;
   button?: ReactElement;
   isSelfControlled?: boolean;
@@ -23,6 +25,8 @@ const Floater: FC<PropsWithChildren<Props>> = ({
   menuClassName,
   isSelfControlled,
   onClose,
+  onSearchChange,
+  onSearchEnter,
   disabled,
   ...rest
 }) => {
@@ -71,6 +75,24 @@ const Floater: FC<PropsWithChildren<Props>> = ({
         className="z-1399"
         onClick={(e) => e.stopPropagation()}
       >
+        {!!onSearchChange && (
+          <div className="floater-search-box">
+            <input
+              type="text"
+              autoFocus
+              onChange={(e) => onSearchChange(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  onSearchEnter?.(e.currentTarget.value);
+                }
+                if (e.key === 'Escape' && isSelfControlled) {
+                  setIsSelfOpen(false);
+                }
+              }}
+              placeholder="Search..."
+            />
+          </div>
+        )}
         <div
           {...rest}
           className={classNames('floater-box max-h-[60vh] overflow-auto', menuClassName)}
