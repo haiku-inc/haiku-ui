@@ -84,6 +84,7 @@ const Floater: FC<PropsWithChildren<Props>> = ({
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   onSearchEnter?.(e.currentTarget.value);
+                  setIsSelfOpen(false);
                 }
                 if (e.key === 'Escape' && isSelfControlled) {
                   setIsSelfOpen(false);
