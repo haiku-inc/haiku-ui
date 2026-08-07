@@ -8,6 +8,7 @@
 
   svg {
     width: 20px;
+    flex-shrink: 0;
     color: var(--mui-palette-info-main);
     cursor: pointer;
     margin: -2px 4px 0 0;
@@ -29,6 +30,7 @@
 
   svg {
     width: 20px;
+    flex-shrink: 0;
     color: var(--mui-palette-warning-main);
     margin: -2px 4px 0 0;
   }
@@ -49,6 +51,7 @@
 
   svg {
     width: 20px;
+    flex-shrink: 0;
     color: var(--mui-palette-success-main);
     margin: -2px 4px 0 0;
   }
@@ -69,6 +72,7 @@
 
   svg {
     width: 20px;
+    flex-shrink: 0;
     color: var(--mui-palette-error-main);
     margin: -2px 4px 0 0;
   }
