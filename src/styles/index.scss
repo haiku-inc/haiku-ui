@@ -6,6 +6,7 @@
   --tertiary: #4267a9;
   --quaternary: #316282;
   --quinary: #31384b;
+  --highlight: lch(80% 120 80);
 
   --table-head: #b2dfef;
   --table-body: color-mix(in oklab, var(--tertiary) 10%, transparent);
@@ -114,6 +115,7 @@
   --tertiary: #6287c9;
   --quaternary: #316282;
   --quinary: #31384b;
+  --highlight: lch(80% 90 85);
 
   --table-head: #002d3f;
   --table-body: color-mix(in oklab, var(--tertiary) 10%, transparent);
