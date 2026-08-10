@@ -123,7 +123,7 @@ const GameCard: FC<Props> = ({
         <Typography variant="h4" className="mt-4!">
           {isCompleted && (
             <Tooltip title="You already completed this game" description="But you may go through again.">
-              <VerifiedIcon className="text-(--text-success) mr-2 mb-1" style={{ width: '24px', display: 'inline' }} />
+              <VerifiedIcon className="text-(--success-text) mr-2 mb-1" style={{ width: '24px', display: 'inline' }} />
             </Tooltip>
           )}
           {name}

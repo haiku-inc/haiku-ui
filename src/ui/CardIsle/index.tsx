@@ -115,7 +115,7 @@ const CardIsle: FC<Props> = ({
           {isCompleted && (
             <Tooltip title="You already completed this" description="But you may go through again.">
               <div className="completion-status">
-                <VerifiedIcon className="completed" style={{ color: 'var(--text-success)' }} />
+                <VerifiedIcon className="completed" style={{ color: 'var(--success-text)' }} />
               </div>
             </Tooltip>
           )}

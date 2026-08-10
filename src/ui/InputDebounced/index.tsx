@@ -24,16 +24,16 @@ const StateIcon: FC<{ level?: 'thinking' | 'unknown' | 'approved' | 'failed' }> 
     case 'unknown':
       return (
         <svg {...attrs}>
-          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--text-info)" stroke-width="2" />
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--info-text)" stroke-width="2" />
           <path
             d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2.25-2.5 3v1.5"
             fill="none"
-            stroke="var(--text-info)"
+            stroke="var(--info-text)"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-          <circle cx="12" cy="17" r="1.5" fill="var(--text-info)" />
+          <circle cx="12" cy="17" r="1.5" fill="var(--info-text)" />
         </svg>
       );
     case 'approved':
@@ -41,7 +41,7 @@ const StateIcon: FC<{ level?: 'thinking' | 'unknown' | 'approved' | 'failed' }> 
         <svg
           {...attrs}
           fill="none"
-          stroke="var(--text-success)"
+          stroke="var(--success-text)"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -65,8 +65,8 @@ const StateIcon: FC<{ level?: 'thinking' | 'unknown' | 'approved' | 'failed' }> 
     case 'failed':
       return (
         <svg {...attrs}>
-          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--text-error)" stroke-width="2" />
-          <path d="M7 7L17 17M17 7L7 17" stroke="var(--text-error)" stroke-width="2" />
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--error-text)" stroke-width="2" />
+          <path d="M7 7L17 17M17 7L7 17" stroke="var(--error-text)" stroke-width="2" />
         </svg>
       );
     default:

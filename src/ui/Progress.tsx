@@ -19,12 +19,12 @@ const Progress: FC<Props> = ({ progress }) => {
       <div
         className={classNames('flex items-center w-full h-5 relative border rounded-lg box-border overflow-hidden')}
         style={{
-          backgroundColor: 'oklch(from var(--background-warning) l c h / 0.2)',
-          borderColor: 'oklch(from var(--background-warning) l c h / 0.4)',
+          backgroundColor: 'oklch(from var(--warning-bg) l c h / 0.2)',
+          borderColor: 'oklch(from var(--warning-bg) l c h / 0.4)',
         }}
       >
         <div
-          className={classNames('h-full! bg-(--background-warning) left-0 rounded-s-lg')}
+          className={classNames('h-full! bg-(--warning-bg) left-0 rounded-s-lg')}
           style={{
             width: `${progressPercent}%`,
           }}
@@ -50,12 +50,12 @@ const Progress: FC<Props> = ({ progress }) => {
             'flex items-center absolute bottom-0 w-full h-1.75  box-border rounded-b-lg overflow-hidden',
           )}
           style={{
-            backgroundColor: 'oklch(from var(--background-error) l c h / 0.8)',
-            borderColor: 'oklch(from var(--background-error) l c h / 0.8)',
+            backgroundColor: 'oklch(from var(--error-bg) l c h / 0.8)',
+            borderColor: 'oklch(from var(--error-bg) l c h / 0.8)',
           }}
         >
           <div
-            className={classNames('h-full! absolute bg-(--background-error) bottom-0 left-0')}
+            className={classNames('h-full! absolute bg-(--error-bg) bottom-0 left-0')}
             style={{
               width: `${progressRequiredPercent}%`,
             }}

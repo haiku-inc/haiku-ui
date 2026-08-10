@@ -12,8 +12,8 @@ const BooleanCell: FC<Props> = ({ value, align, ...props }) => {
       align={align}
       {...props}
       className={classNames('font-(family-name:--font-oxanium)!', {
-        'text-(--text-error)!': !value,
-        'text-(--text-success)!': !!value,
+        'text-(--error-text)!': !value,
+        'text-(--success-text)!': !!value,
       })}
     >
       {value ? '✓' : '✗'}

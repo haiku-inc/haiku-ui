@@ -32,7 +32,7 @@ const EmptyListPlaceholder: FC<PropsWithChildren<Props>> = ({
         backgroundColor: 'var(--background-sidebar)',
         border: '1px solid var(--border)',
         borderRadius: inner ? '8px' : '16px',
-        color: isError ? 'var(--text-error)' : isConfirm ? 'var(--text-success)' : 'var(--text-primary)',
+        color: isError ? 'var(--error-text)' : isConfirm ? 'var(--success-text)' : 'var(--text-primary)',
         ...style,
       }}
     >

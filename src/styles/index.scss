@@ -8,6 +8,22 @@
   --quinary: #31384b;
   --highlight: lch(80% 120 80);
 
+  --success: oklch(70% 0.18 142);
+  --success-text: oklch(22% 0.18 142);
+  --success-bg: oklch(90% 0.16 149);
+
+  --info: oklch(64% 0.2 255);
+  --info-text: oklch(27% 0.07 254);
+  --info-bg: oklch(85% 0.1 227);
+
+  --warning: oklch(71% 0.19 41.73);
+  --warning-text: oklch(from var(--warning) 30% c h);
+  --warning-bg: oklch(from var(--warning) 92% 0.11 91);
+
+  --error: oklch(70% 0.21 16.45);
+  --error-text: oklch(40% 0.21 16.45);
+  --error-bg: oklch(89% 0.06 18.24);
+
   --table-head: #b2dfef;
   --table-body: color-mix(in oklab, var(--tertiary) 10%, transparent);
   --table-hover: #fcba2899;
@@ -32,11 +48,6 @@
 
   --background-terminal: #fafafc;
 
-  --background-error: #ffcbcb;
-  --background-warning: #e6b216;
-  --background-success: #a8f2af;
-  --background-info: #3db3e2;
-
   --border: #ffffff;
   --border-terminal: #1c3b50;
   --border-terminal-hover: #cfb53b;
@@ -56,11 +67,6 @@
   --text-inverted: #f1f1f1;
   --text-faded: oklch(from var(--text-primary) l c h / 0.2);
   --text-dimmed: #646474;
-
-  --text-error: #e33655;
-  --text-success: #008000;
-  --text-warning: lch(66% 80 48); //#df8706;
-  --text-info: #0d53a2;
 
   --beacon-0: #e92a67aa;
   --beacon-1: #e92a67;
@@ -97,14 +103,6 @@
   --mui-palette-background-error: #e53935;
   --mui-palette-background-error-hover: #ff4b4b;
   --mui-palette-common-onBackgroundChannel: 0 0 0;
-
-  --mui-palette-info-main: oklch(from var(--text-info) l c h / 1);
-  --mui-palette-Alert-infoColor: oklch(from var(--background-info) 35% c h / 1);
-  --mui-palette-Alert-infoStandardBg: oklch(from var(--background-info) l c h / 0.2);
-
-  --mui-palette-error-main: oklch(from var(--text-error) 75% c h / 1);
-  --mui-palette-Alert-errorColor: oklch(from var(--background-error) 35% c h / 1);
-  --mui-palette-Alert-errorStandardBg: oklch(from var(--background-error) l c h / 0.6);
 }
 
 @mixin dark-theme {
@@ -116,6 +114,22 @@
   --quaternary: #316282;
   --quinary: #31384b;
   --highlight: lch(80% 90 85);
+
+  --success: oklch(68% 0.16 149);
+  --success-text: oklch(80% 0.16 149);
+  --success-bg: oklch(22% 0.18 142);
+
+  --info: oklch(64% 0.2 255);
+  --info-text: oklch(74% 0.1 227);
+  --info-bg: oklch(27% 0.07 254);
+
+  --warning: oklch(60% 0.19 42);
+  --warning-text: oklch(83% 0.16 81);
+  --warning-bg: oklch(29% 0.017 55.55);
+
+  --error: oklch(61% 0.25 28.8);
+  --error-text: oklch(99% 0.25 28.8);
+  --error-bg: oklch(10% 0.25 28.8);
 
   --table-head: #002d3f;
   --table-body: color-mix(in oklab, var(--tertiary) 10%, transparent);
@@ -141,11 +155,6 @@
 
   --background-terminal: #23272f;
 
-  --background-error: #ffcbcb;
-  --background-warning: #e6b216;
-  --background-success: #88f27f;
-  --background-info: #3db3e2;
-
   --border: #13162b;
   --border-terminal: #316282;
   --border-terminal-hover: #aa6c39;
@@ -165,11 +174,6 @@
   --text-inverted: #13162b;
   --text-faded: oklch(from var(--text-primary) l c h / 0.33);
   --text-dimmed: #909090;
-
-  --text-error: #f30f0f;
-  --text-success: #40b15e;
-  --text-warning: lch(66% 80 48); // #c67700;
-  --text-info: #2a8af6; // #0d53a2;
 
   --beacon-0: #e92a67aa;
   --beacon-1: #e92a67;
@@ -207,16 +211,18 @@
   --mui-palette-background-error-hover: #e53935;
   --mui-palette-common-onBackgroundChannel: 255 255 255;
 
-  --mui-palette-info-main: oklch(from var(--text-info) 65% c h / 1);
-  --mui-palette-Alert-infoColor: oklch(from var(--background-info) 85% c h / 1);
-  --mui-palette-Alert-infoStandardBg: oklch(from var(--background-info) l c h / 0.2);
-
-  --mui-palette-error-main: oklch(from var(--text-error) 65% c h / 1);
-  --mui-palette-Alert-errorColor: oklch(from var(--background-error) 95% c h / 1);
-  --mui-palette-Alert-errorStandardBg: oklch(from var(--background-error) l c h / 0.2);
-
-  --mui-palette-Alert-warningColor: oklch(from var(--background-warning) 95% c h / 1);
-  --mui-palette-Alert-warningStandardBg: oklch(from var(--background-warning) l c h / 0.2);
+  --mui-palette-success-main: var(--success);
+  --mui-palette-Alert-successColor: var(--success-text);
+  --mui-palette-Alert-successStandardBg: var(--success-bg);
+  --mui-palette-info-main: var(--info);
+  --mui-palette-Alert-infoColor: var(--info-text);
+  --mui-palette-Alert-infoStandardBg: var(--info-bg);
+  --mui-palette-warning-main: var(--warning);
+  --mui-palette-Alert-warningColor: var(--warning-text);
+  --mui-palette-Alert-warningStandardBg: var(--warning-bg);
+  --mui-palette-error-main: var(--error);
+  --mui-palette-Alert-errorColor: var(--error-text);
+  --mui-palette-Alert-errorStandardBg: var(--error-bg);
 
   .leaflet-layer,
   .leaflet-control-zoom-in,
@@ -302,7 +308,6 @@
   --mui-palette-background-default: var(--background);
   --mui-palette-background-paper: var(--background-card);
   --mui-palette-divider: var(--border-terminal);
-  --mui-palette-success-main: var(--text-success);
   --mui-palette-success-contrastText: var(--text-light);
 
   --font-regular: 'Open Sans', sans-serif;

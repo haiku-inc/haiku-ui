@@ -1,15 +1,15 @@
 .text-block-info {
   border-radius: 6px;
   padding: 15px 20px;
-  background-color: var(--mui-palette-Alert-infoStandardBg);
-  color: var(--mui-palette-Alert-infoColor);
+  background-color: var(--info-bg);
+  color: var(--info-text);
   display: flex;
   gap: 5px;
 
   svg {
     width: 20px;
     flex-shrink: 0;
-    color: var(--mui-palette-info-main);
+    color: var(--info);
     cursor: pointer;
     margin: -2px 4px 0 0;
   }
@@ -23,15 +23,15 @@
 .text-block-warning {
   border-radius: 6px;
   padding: 15px 20px;
-  background-color: var(--mui-palette-Alert-warningStandardBg);
-  color: var(--mui-palette-Alert-warningColor);
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
   display: flex;
   gap: 5px;
 
   svg {
     width: 20px;
     flex-shrink: 0;
-    color: var(--mui-palette-warning-main);
+    color: var(--warning);
     margin: -2px 4px 0 0;
   }
 
@@ -44,15 +44,15 @@
 .text-block-success {
   border-radius: 6px;
   padding: 15px 20px;
-  background-color: var(--mui-palette-Alert-successStandardBg);
-  color: var(--mui-palette-Alert-successColor);
+  background-color: var(--success-bg);
+  color: var(--success-text);
   display: flex;
   gap: 5px;
 
   svg {
     width: 20px;
     flex-shrink: 0;
-    color: var(--mui-palette-success-main);
+    color: var(--success);
     margin: -2px 4px 0 0;
   }
 
@@ -65,15 +65,15 @@
 .text-block-error {
   border-radius: 6px;
   padding: 15px 20px;
-  background-color: var(--mui-palette-Alert-errorStandardBg);
-  color: var(--mui-palette-Alert-errorColor);
+  background-color: var(--error-bg);
+  color: var(--error-text);
   display: flex;
   gap: 5px;
 
   svg {
     width: 20px;
     flex-shrink: 0;
-    color: var(--mui-palette-error-main);
+    color: var(--error);
     margin: -2px 4px 0 0;
   }
 
