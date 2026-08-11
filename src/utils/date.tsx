@@ -25,7 +25,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   if (minutes < 60) {
     return (
       <span title={date.toLocaleTimeString()}>
-        {formatAmount(minutes, !stripped ? 'minute' : 'm', stripped)}
+        {formatAmount(minutes, !stripped ? 'minute' : 'min', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
     );
@@ -51,7 +51,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   if (months < 12) {
     return (
       <span title={date.toLocaleTimeString()}>
-        {formatAmount(months, !stripped ? 'month' : 'm', stripped)}
+        {formatAmount(months, !stripped ? 'month' : 'mo', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
     );
