@@ -19,7 +19,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   const years = Math.floor(days / 365);
 
   if (seconds < 60) {
-    return <span title={date.toLocaleTimeString()}>{!stripped && 'just '}now</span>;
+    return <span title={`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}>{!stripped && 'just '}now</span>;
   }
 
   if (minutes < 60) {
