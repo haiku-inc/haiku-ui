@@ -1,4 +1,4 @@
-import { EMPTY_VALUE_FILLER } from './general';
+import { EMPTY_VALUE_FILLER } from '../constants/general';
 
 const formatAmount = (amount: number, unit: string, stripped: boolean) =>
   `${amount}${stripped ? '' : ' '}${unit}${amount === 1 ? '' : 's'}`;
