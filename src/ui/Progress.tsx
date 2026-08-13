@@ -29,12 +29,7 @@ const Progress: FC<Props> = ({ progress }) => {
             width: `${progressPercent}%`,
           }}
         />
-        <div
-          className={classNames('z-1 text-sm/4 text-shadow-xs absolute left-2 top-0', {
-            'text-(--text-dark) text-shadow-(color:--text-light)': progressPercent > 10,
-            'text-(--text-light) text-shadow-(color:--text-dark)': progressPercent <= 10,
-          })}
-        >
+        <div className="z-1 text-sm/4 text-shadow-xs absolute left-2 top-0 text-(--text-primary) text-shadow-(color:--text-inverted)">
           {progress.completedSteps}/{progress.totalSteps}
           {!!progress.completedRequiredSteps && (
             <span>
