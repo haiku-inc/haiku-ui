@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import type { FC, JSX, PropsWithChildren } from 'react';
+import type { FC, PropsWithChildren, ReactNode } from 'react';
 import Isle from '../Isle';
 
 interface Props {
-  title: string | JSX.Element;
+  title: ReactNode;
   progress?: number;
   isLoading?: boolean;
   noWrap?: boolean;

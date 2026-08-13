@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
 interface Props {
   title: string;
@@ -7,8 +7,8 @@ interface Props {
   onClick?: () => void;
   variant?: 'text' | 'outlined' | 'contained';
   color?: 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
   disabled?: boolean;
   loading?: boolean;
 }

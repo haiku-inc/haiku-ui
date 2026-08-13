@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import classNames from 'classnames';
-import type { FC, MouseEvent, PropsWithChildren } from 'react';
+import type { FC, MouseEvent, PropsWithChildren, ReactNode } from 'react';
 
 import './styles.scss';
 
@@ -11,8 +11,8 @@ interface GreenButtonProps {
   isHyperactive?: boolean;
   disabled?: boolean;
   className?: string;
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
   variant?: 'text' | 'contained' | 'outlined';
 }
 const GreenButton: FC<PropsWithChildren<GreenButtonProps>> = ({

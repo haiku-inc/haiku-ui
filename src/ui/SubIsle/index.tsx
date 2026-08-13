@@ -1,14 +1,14 @@
 import Collapse from '@mui/material/Collapse';
 import classNames from 'classnames';
-import type { FC, HTMLAttributes, JSX, KeyboardEvent, PropsWithChildren, Ref } from 'react';
+import type { FC, HTMLAttributes, KeyboardEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { useState } from 'react';
 import ExpandIcon from '../../assets/unicons/service/expand.svg';
 import SkeletonBlock from '../SkeletonBlock';
 import './styles.scss';
 
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
-  title?: string | JSX.Element;
-  subtitle?: string;
+  title?: ReactNode;
+  subtitle?: ReactNode;
   isLoading?: boolean;
   isFoldable?: boolean;
   isDefaultExpanded?: boolean;

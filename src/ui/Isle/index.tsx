@@ -12,10 +12,10 @@ interface Props {
   isHighlighted?: boolean;
   isActive?: boolean;
   className?: string;
-  title?: string | number | ReactNode;
-  category?: string | number | ReactNode;
-  subtitle?: string | number | ReactNode;
-  description?: string | ReactNode;
+  title?: ReactNode;
+  category?: ReactNode;
+  subtitle?: ReactNode;
+  description?: ReactNode;
   ref?: Ref<HTMLDivElement>;
   onClick?: MouseEventHandler<HTMLDivElement>;
   style?: CSSProperties;
