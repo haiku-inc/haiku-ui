@@ -18,13 +18,15 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   const months = Math.floor(days / 30);
   const years = Math.floor(days / 365);
 
+  const title = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+
   if (seconds < 60) {
-    return <span title={`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}>{!stripped && 'just '}now</span>;
+    return <span title={title}>{!stripped && 'just '}now</span>;
   }
 
   if (minutes < 60) {
     return (
-      <span title={date.toLocaleTimeString()}>
+      <span title={title}>
         {formatAmount(minutes, !stripped ? 'minute' : 'min', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
@@ -33,7 +35,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
 
   if (hours < 24) {
     return (
-      <span title={date.toLocaleTimeString()}>
+      <span title={title}>
         {formatAmount(hours, !stripped ? 'hour' : 'h', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
@@ -42,7 +44,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
 
   if (days < 30) {
     return (
-      <span title={date.toLocaleTimeString()}>
+      <span title={title}>
         {formatAmount(days, !stripped ? 'day' : 'd', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
@@ -50,7 +52,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   }
   if (months < 12) {
     return (
-      <span title={date.toLocaleTimeString()}>
+      <span title={title}>
         {formatAmount(months, !stripped ? 'month' : 'mo', stripped)}
         {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
       </span>
@@ -58,7 +60,7 @@ export const formatRelativeTime = (value?: string | null, stripped = false) => {
   }
 
   return (
-    <span title={date.toLocaleTimeString()}>
+    <span title={title}>
       {formatAmount(years, !stripped ? 'year' : 'yr', stripped)}
       {!stripped ? (diffMs < 0 ? ' from now' : ' ago') : ''}
     </span>
