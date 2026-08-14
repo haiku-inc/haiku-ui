@@ -581,6 +581,7 @@ ol {
     top: attr(data-tooltip-top px, auto);
 
     font-size: 12px;
+    line-height: 12px;
     color: var(--text-light);
     text-shadow:
       var(--text-dark) 0.5px 0.5px 1px,
