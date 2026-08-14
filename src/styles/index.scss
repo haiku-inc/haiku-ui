@@ -561,43 +561,26 @@ ol {
     content: attr(data-tooltip);
     min-width: attr(data-tooltip-width px, 140px);
     min-height: attr(data-tooltip-height px, 20px);
-    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     pointer-events: none;
 
     background: oklch(from var(--tertiary) 35% c h / 1);
     padding: 5px 5px;
     border-radius: 4px;
+
+    position: absolute;
     z-index: 2330 !important;
+
     left: attr(data-tooltip-left px, auto);
     right: attr(data-tooltip-right px, auto);
     bottom: attr(data-tooltip-bottom px, auto);
-    top: attr(data-tooltip-top px, -20px);
+    top: attr(data-tooltip-top px, auto);
+
     font-size: 12px;
-    color: var(--text-light);
-    text-shadow:
-      var(--text-dark) 0.5px 0.5px 1px,
-      var(--text-dark) 0 0 1px,
-      var(--text-dark) 0 0 1px;
-  }
-}
-
-[data-bubble] {
-  position: relative;
-
-  &:hover::after {
-    content: attr(data-bubble);
-    min-width: 140px;
-    position: absolute;
-    pointer-events: none;
-
-    background: oklch(from var(--tertiary) 35% c h / 1);
-    padding: 5px 10px;
-    border-radius: 4px;
-    z-index: 12340 !important;
-    top: 0;
-    left: 0;
-    font-size: 12px;
-    transform: translateY(-100%);
     color: var(--text-light);
     text-shadow:
       var(--text-dark) 0.5px 0.5px 1px,
