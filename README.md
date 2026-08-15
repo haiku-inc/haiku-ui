@@ -65,3 +65,26 @@ For local development use `npm link` on this repo, then `npm link haiku-ui` on t
   @include custom-universal-colors;
 }
 ```
+
+## Some elements
+
+# Tooltip
+
+Set attribute on element `data-tooltip` with tooltip text.
+
+It also has control attributes (number):
+
+- data-tooltip-width
+- data-tooltip-height
+- data-tooltip-left
+- data-tooltip-right
+- data-tooltip-bottom
+- data-tooltip-top
+
+# Colorful highlights
+
+Set classname `border-highlight` or `border-highlight-2` for colorful highlight.
+
+# Horizontal line snaps
+
+Use a container with children `div` and set to it class `snap-scroll-block`.
