@@ -1,0 +1,37 @@
+.haiku-ui-icon-button {
+  --icon-color: var(--primary);
+  --icon-size: 16px;
+  --icon-bg: none;
+  --icon-bg-hover: color-mix(in oklab, var(--tertiary) 20%, transparent);
+
+  color: var(--icon-color);
+  position: relative;
+  background-color: var(--icon-bg);
+  cursor: pointer;
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--icon-bg-hover);
+  }
+
+  &:not(.is-disabled):active::after {
+    background-color: color-mix(in oklab, var(--tertiary) 35%, transparent);
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    filter: grayscale(100%);
+  }
+
+  > * {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+}

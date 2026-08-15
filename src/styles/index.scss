@@ -730,7 +730,7 @@ main {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 
-  & > div {
+  > div {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
 
