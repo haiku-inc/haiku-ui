@@ -21,9 +21,9 @@
     background-color: var(--background-card);
   }
 
-  &.is-active:hover,
-  &.is-active:hover .sub-isle-title,
-  &.is-active:hover .sub-isle-subtitle {
+  &.is-active:hover:not(:has(.sub-isle-subtitle button:hover)),
+  &.is-active:hover:not(:has(.sub-isle-subtitle button:hover)) .sub-isle-title,
+  &.is-active:hover:not(:has(.sub-isle-subtitle button:hover)) .sub-isle-subtitle {
     background-color: var(--background-card-hover);
   }
 }
