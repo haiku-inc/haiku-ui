@@ -54,7 +54,7 @@
     "prettier-plugin-organize-imports": "4.3.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-router-dom": "7.18.1",
+    "react-router-dom": "7.18.2",
     "sass-embedded": "1.100.0",
     "tailwindcss": "4.3.3",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
