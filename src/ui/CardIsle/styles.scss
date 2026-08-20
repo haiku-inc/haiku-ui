@@ -166,6 +166,23 @@
     align-items: center;
     z-index: 1030;
 
+    .free-content {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      color: var(--warning-text);
+      background-color: var(--warning-bg);
+    }
+
     .button {
       position: relative;
 

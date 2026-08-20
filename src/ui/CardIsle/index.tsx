@@ -43,6 +43,7 @@ interface Props {
   isHaikuDeveloped?: boolean;
   difficulty?: string;
   category?: ChallengeSpecialty;
+  isFree?: boolean;
 }
 
 const CardIsle: FC<Props> = ({
@@ -68,6 +69,7 @@ const CardIsle: FC<Props> = ({
   isHaikuDeveloped,
   difficulty,
   category,
+  isFree,
 }) => {
   const navigate = useNavigate();
 
@@ -173,6 +175,38 @@ const CardIsle: FC<Props> = ({
               </div>
               <CardButtonRight />
             </div>
+
+            {!!isFree && (
+              <div
+                className="free-content"
+                data-tooltip="No subscription or payment is needed for this item"
+                data-tooltip-top={-50}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 11h12a4 4 0 0 1 3.9 4.9l-.8 3.2A2 2 0 0 1 19.2 21H18a2 2 0 0 1-1.8-1.1L15 17H9l-1.2 2.9A2 2 0 0 1 6 21H4.8a2 2 0 0 1-1.9-1.9l-.8-3.2A4 4 0 0 1 6 11z" />
+                  <path d="M6.5 14h2" />
+                  <path d="M7.5 13v2" />
+                  <circle cx="16" cy="14" r="0.5" fill="currentColor" />
+                  <circle cx="17.5" cy="15.5" r="0.5" fill="currentColor" />
+                  <path
+                    d="M12 2l1.2 2.6 2.8.4-2 2 .5 2.8L12 8.4l-2.5 1.4.5-2.8-2-2 2.8-.4z"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+                Free
+              </div>
+            )}
           </div>
         )}
         {!!onCallToActionClick && (
