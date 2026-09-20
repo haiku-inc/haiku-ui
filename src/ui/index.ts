@@ -1,4 +1,5 @@
 export { default as BottomSection } from './BottomSection';
+export { default as Button } from './Button';
 export { default as CardImage } from './CardImage';
 export { default as CardIsle, CardIsleSkeleton } from './CardIsle';
 export { default as CardTitle } from './CardTitle';
