@@ -79,6 +79,7 @@ const filledCreator = (variantClass: string) => {
 (Button as ICompound).Error = variantCreator('button-error');
 (Button as ICompound).Warning = variantCreator('button-warning');
 (Button as ICompound).Info = variantCreator('button-info');
+(Button as ICompound).Info = variantCreator('button-success');
 (Button as ICompound).Primary = variantCreator('button-primary');
 (Button as ICompound).Secondary = variantCreator('button-secondary');
 (Button as ICompound).Tertiary = variantCreator('button-tertiary');
@@ -88,6 +89,7 @@ const filledCreator = (variantClass: string) => {
 (Button as ICompound).Text.Error = textCreator('button-error');
 (Button as ICompound).Text.Warning = textCreator('button-warning');
 (Button as ICompound).Text.Info = textCreator('button-info');
+(Button as ICompound).Text.Info = textCreator('button-success');
 (Button as ICompound).Text.Primary = textCreator('button-primary');
 (Button as ICompound).Text.Secondary = textCreator('button-secondary');
 (Button as ICompound).Text.Tertiary = textCreator('button-tertiary');
@@ -97,6 +99,7 @@ const filledCreator = (variantClass: string) => {
 (Button as ICompound).Filled.Error = filledCreator('button-error');
 (Button as ICompound).Filled.Warning = filledCreator('button-warning');
 (Button as ICompound).Filled.Info = filledCreator('button-info');
+(Button as ICompound).Filled.Info = filledCreator('button-success');
 (Button as ICompound).Filled.Primary = filledCreator('button-primary');
 (Button as ICompound).Filled.Secondary = filledCreator('button-secondary');
 (Button as ICompound).Filled.Tertiary = filledCreator('button-tertiary');

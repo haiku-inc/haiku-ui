@@ -22,7 +22,7 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
 
-    "types": ["vite-plugin-svgr/client", "@webgpu/types", "geojson"]
+    "types": ["vite-plugin-svgr/client", "@webgpu/types", "geojson", "@testing-library/jest-dom"]
   },
   "envDir": "env",
   "include": ["**/*.ts", "**/*.tsx", "declarations.d.ts"],
