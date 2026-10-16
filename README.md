@@ -88,3 +88,49 @@ Set classname `border-highlight` or `border-highlight-2` for colorful highlight.
 # Horizontal line snaps
 
 Use a container with children `div` and set to it class `snap-scroll-block`.
+
+## Native forms and dialogs
+
+`Dialog`, `InputField`, `SelectField`, `CheckboxField`, `UtcDateTimeField`, `Notice`,
+`Disclosure`, `DataTable` and `Pagination` are native HTML components styled with Haiku theme tokens.
+They do not import or wrap MUI. Import them from `haiku-ui` or their `haiku-ui/src/ui/` modules.
+
+```tsx
+import { Dialog, InputField, Notice } from 'haiku-ui';
+import Button from 'haiku-ui/src/ui/Button';
+
+<Dialog
+  open={open}
+  title="Orbit setup"
+  onClose={cancel}
+  actions={
+    <Button.Primary type="button" onClick={apply}>
+      Apply
+    </Button.Primary>
+  }
+>
+  <InputField
+    label="Position X (km)"
+    value={positionX}
+    onChange={updatePositionX}
+    description="In the declared inertial frame"
+    error={positionError}
+  />
+  <Notice tone="info">Review the data coverage before applying.</Notice>
+</Dialog>;
+```
+
+`Dialog` is controlled: Escape, the close button and a backdrop pointer gesture request `onClose`.
+The owner closes it by setting `open` to false. It uses `showModal()` for the browser's top layer,
+focus containment, inert background and focus restoration. Actions remain inside the modal.
+Native dialogs require a browser with `HTMLDialogElement.showModal` support.
+
+`UtcDateTimeField` accepts a UTC ISO string ending in `Z`, or an empty string. Its
+`onValueChange` receives a normalized UTC ISO string, or an empty string when cleared. Native
+editing never converts through the computer's local timezone. It retains incomplete edits while
+reporting invalid required input; it never chooses a replacement instant.
+
+Inputs and selects accept normal native HTML attributes. Labels, descriptions and error messages
+are connected to their controls. Checkboxes use native `onChange` events. Native selection, disclosure,
+and pagination controls preserve keyboard behavior. `DataTable` supplies table and scroll-region
+semantics; applications provide their column headers, sorting buttons and row contents.

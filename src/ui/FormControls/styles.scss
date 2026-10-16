@@ -1,0 +1,196 @@
+.haiku-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.35rem;
+  font: inherit;
+  color: var(--text-primary, #202020);
+  > label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  > input,
+  > select {
+    min-width: 0;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid var(--border-terminal, #657078);
+    border-radius: 0.4rem;
+    background: var(--background-card, #fff);
+    color: var(--text-primary, #202020);
+    font: inherit;
+    line-height: 1.4;
+    &:focus-visible {
+      outline: 2px solid var(--primary, #0a605c);
+      outline-offset: 2px;
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    &[aria-invalid='true'] {
+      border-color: var(--error, #b42318);
+    }
+  }
+  small {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-dimmed, #555);
+  }
+  &__error {
+    color: var(--error-text, #b42318) !important;
+  }
+  &--checkbox > label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font: inherit;
+    cursor: pointer;
+  }
+  &--checkbox input {
+    appearance: auto;
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: none;
+    accent-color: var(--primary, #0a605c);
+  }
+  &--checkbox input:focus-visible {
+    outline: 2px solid var(--primary, #0a605c);
+    outline-offset: 3px;
+  }
+  &--checkbox:has(input:disabled) > label {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.haiku-menu-select {
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 0;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-terminal, #657078);
+    border-radius: 0.4rem;
+    background: var(--background-card, #fff);
+    color: var(--text-primary, #202020);
+    font: inherit;
+    line-height: 1.4;
+    text-align: left;
+    cursor: pointer;
+    &:focus-visible {
+      outline: 2px solid var(--primary, #0a605c);
+      outline-offset: 2px;
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    &[aria-invalid='true'] {
+      border-color: var(--error, #b42318);
+    }
+  }
+  &__menu[popover] {
+    position: fixed;
+    inset: auto;
+    margin: 0;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    max-height: min(280px, calc(100dvh - 16px));
+    overflow-y: auto;
+    // Same surface as the Floater menus (account menu and friends), so every haiku menu reads as one family.
+    gap: 2px;
+    padding: 5px;
+    border: 1px solid var(--floater-border, #657078);
+    border-radius: 8px;
+    background: var(--floater-bg, #fff);
+    color: var(--floater-text, var(--text-primary, #202020));
+    box-shadow: 0 0.75rem 2rem #0008;
+    font: inherit;
+  }
+  &__menu[popover]:popover-open {
+    display: flex;
+  }
+  &__option {
+    width: 100%;
+    min-height: 2.25rem;
+    padding: 4px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--floater-bg-item, transparent);
+    color: inherit;
+    font: inherit;
+    font-family: var(--font-oxanium, inherit);
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+      background: var(--floater-bg-item-hover, #365b62);
+      outline: none;
+    }
+    &[aria-selected='true'] {
+      background: var(--floater-bg-item-highlighted, transparent);
+      color: var(--primary, #0a605c);
+      font-weight: 700;
+      &:hover,
+      &:focus-visible {
+        background: var(--floater-bg-item-highlighted-hover, #365b62);
+      }
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+.haiku-notice {
+  padding: 0.85rem 1rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--info, #2463aa);
+  color: var(--info-text, #123e66);
+  background: var(--info-bg, #e7f2ff);
+  overflow-wrap: anywhere;
+  font: inherit;
+  line-height: 1.5;
+  &--success {
+    border-color: var(--success, #368042);
+    color: var(--success-text, #234a24);
+    background: var(--success-bg, #e5f4e7);
+  }
+  &--warning {
+    border-color: var(--warning, #a66d1c);
+    color: var(--warning-text, #69420c);
+    background: var(--warning-bg, #fff3dc);
+  }
+  &--error {
+    border-color: var(--error, #b42318);
+    color: var(--error-text, #84241c);
+    background: var(--error-bg, #ffebe8);
+  }
+}
+.haiku-disclosure {
+  border: 1px solid var(--border-terminal, #657078);
+  border-radius: 0.4rem;
+  color: var(--text-primary, #202020);
+  > summary {
+    padding: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  > summary:focus-visible {
+    outline: 2px solid var(--primary, #0a605c);
+    outline-offset: 2px;
+  }
+  &__body {
+    padding: 0 0.75rem 0.75rem;
+  }
+}

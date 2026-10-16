@@ -1,0 +1,52 @@
+.haiku-data-table {
+  overflow: auto;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border-terminal, #657078);
+  border-radius: 0.4rem;
+  background: var(--background-card, #fff);
+  &:focus-visible {
+    outline: 2px solid var(--primary, #0a605c);
+    outline-offset: 2px;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font: inherit;
+  }
+  th,
+  td {
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-terminal, #657078);
+  }
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--background-card, #fff);
+    font-weight: 600;
+  }
+  tr[aria-selected='true'] > td {
+    background: var(--table-selected, #dceee8);
+  }
+  tbody tr:hover > td {
+    background: var(--table-hover, #ebf1ed);
+  }
+}
+.haiku-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-block: 0.75rem;
+  .haiku-field {
+    flex-direction: row;
+    align-items: center;
+  }
+  .haiku-field select {
+    width: auto;
+  }
+}

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import type { CSSProperties, FC, HTMLAttributes, JSX, MouseEvent, PropsWithChildren } from 'react';
+import type { ButtonHTMLAttributes, CSSProperties, FC, JSX, MouseEvent, PropsWithChildren } from 'react';
 import './styles.scss';
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: JSX.Element;
   className?: string;
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;

@@ -1,0 +1,68 @@
+.haiku-dialog {
+  --haiku-dialog-width: 56rem;
+  padding: 0;
+  border: 1px solid var(--border-terminal, #657078);
+  border-radius: 0.75rem;
+  width: min(var(--haiku-dialog-width), calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  color: var(--text-primary, #202020);
+  background: var(--background-card, #fff);
+  box-shadow: 0 1rem 4rem #0006;
+  overflow: hidden;
+  font: inherit;
+  overscroll-behavior: contain;
+  &[open] {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  &::backdrop {
+    background: #0009;
+  }
+  &--sm {
+    --haiku-dialog-width: 32rem;
+  }
+  &--lg {
+    --haiku-dialog-width: 68rem;
+  }
+  &--xl {
+    --haiku-dialog-width: 84rem;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-terminal, #657078);
+  }
+  &__header h2 {
+    margin: 0;
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  &__close {
+    flex: none;
+    font-size: 1.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+  }
+  &__body {
+    min-height: 0;
+    padding: 1.25rem;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border-terminal, #657078);
+  }
+}
