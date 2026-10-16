@@ -40,3 +40,16 @@ export { default as Text } from './Text';
 export { default as ThemeToggle } from './ThemeToggle';
 export { default as Thumbnail } from './Thumbnail';
 export { default as Tooltip } from './Tooltip';
+
+export { DataTable, Pagination } from './DataTable';
+export { default as Dialog } from './Dialog';
+export type { DialogProps } from './Dialog';
+export {
+  CheckboxField,
+  Disclosure,
+  InputField,
+  MenuSelectField,
+  Notice,
+  SelectField,
+  UtcDateTimeField,
+} from './FormControls';

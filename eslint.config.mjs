@@ -9,11 +9,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
   {
-    ignores: [
-      'dist',
-      'public',
-      '.prettierrc.js',
+    files: [
+      'src/ui/Dialog/**/*.{ts,tsx}',
+      'src/ui/FormControls/**/*.{ts,tsx}',
+      'src/ui/DataTable/**/*.{ts,tsx}',
+      'src/ui/Button/index.tsx',
     ],
+    rules: { 'no-restricted-imports': ['error', { patterns: ['@mui/*'] }] },
+  },
+  {
+    ignores: ['dist', 'public', '.prettierrc.js'],
   },
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
@@ -44,11 +49,7 @@ export default [
     },
   },
   {
-    files: [
-      'eslint.config.mjs',
-      'lint-staged.config.mjs',
-      'scripts/**/*.{js,mjs,cjs}',
-    ],
+    files: ['eslint.config.mjs', 'lint-staged.config.mjs', 'scripts/**/*.{js,mjs,cjs}'],
     languageOptions: { globals: globals.node },
   },
 ];
