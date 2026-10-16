@@ -58,4 +58,19 @@ describe('native modal dialog', () => {
     unmount();
     expect(close).toHaveBeenCalledOnce();
   });
+  it('keeps its native close event from reaching an enclosing onClose handler', () => {
+    const outerClose = vi.fn();
+    // An enclosing component that forwards `onClose` onto its DOM root, as a MUI modal does. The DOM types do not
+    // declare `onClose` on a div, so it is passed through a spread.
+    const outerProps = { onClose: outerClose };
+    render(
+      <div {...outerProps}>
+        <Dialog open title="Orbit setup" onClose={vi.fn()}>
+          <p>Nested</p>
+        </Dialog>
+      </div>,
+    );
+    screen.getByRole('dialog').dispatchEvent(new Event('close', { bubbles: false }));
+    expect(outerClose).not.toHaveBeenCalled();
+  });
 });

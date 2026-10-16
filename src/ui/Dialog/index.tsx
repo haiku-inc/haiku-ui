@@ -62,6 +62,9 @@ export default function Dialog({
         event.stopPropagation();
         onClose();
       }}
+      // A native `close` does not bubble, but React re-dispatches it through the component tree. Without this, an
+      // enclosing component that takes an `onClose` prop onto its DOM root (such as a MUI modal) closes too.
+      onClose={(event) => event.stopPropagation()}
       onPointerDown={(event) => {
         backdropPointer.current = isBackdrop(event);
       }}

@@ -106,11 +106,13 @@
     flex-direction: column;
     max-height: min(280px, calc(100dvh - 16px));
     overflow-y: auto;
-    padding: 0.3rem;
-    border: 1px solid var(--border-terminal, #657078);
-    border-radius: 0.4rem;
-    background: var(--background-card, #fff);
-    color: var(--text-primary, #202020);
+    // Same surface as the Floater menus (account menu and friends), so every haiku menu reads as one family.
+    gap: 2px;
+    padding: 5px;
+    border: 1px solid var(--floater-border, #657078);
+    border-radius: 8px;
+    background: var(--floater-bg, #fff);
+    color: var(--floater-text, var(--text-primary, #202020));
     box-shadow: 0 0.75rem 2rem #0008;
     font: inherit;
   }
@@ -119,13 +121,15 @@
   }
   &__option {
     width: 100%;
-    min-height: 2.5rem;
-    padding: 0.5rem 0.65rem;
+    min-height: 2.25rem;
+    padding: 4px 10px;
     border: 0;
-    border-radius: 0.25rem;
-    background: transparent;
+    border-radius: 6px;
+    background: var(--floater-bg-item, transparent);
     color: inherit;
     font: inherit;
+    font-family: var(--font-oxanium, inherit);
+    font-weight: 500;
     text-align: left;
     cursor: pointer;
     &:hover,
@@ -134,8 +138,13 @@
       outline: none;
     }
     &[aria-selected='true'] {
+      background: var(--floater-bg-item-highlighted, transparent);
       color: var(--primary, #0a605c);
       font-weight: 700;
+      &:hover,
+      &:focus-visible {
+        background: var(--floater-bg-item-highlighted-hover, #365b62);
+      }
     }
     &:disabled {
       opacity: 0.6;
