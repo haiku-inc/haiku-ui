@@ -91,9 +91,12 @@ Use a container with children `div` and set to it class `snap-scroll-block`.
 
 ## Native forms and dialogs
 
-`Dialog`, `InputField`, `SelectField`, `CheckboxField`, `UtcDateTimeField`, `Notice`,
-`Disclosure`, `DataTable` and `Pagination` are native HTML components styled with Haiku theme tokens.
-They do not import or wrap MUI. Import them from `haiku-ui` or their `haiku-ui/src/ui/` modules.
+`Dialog`, `InputField`, `CheckboxField`, `UtcDateTimeField`, `Notice`, `Disclosure`, `DataTable` and
+`Pagination` are native HTML components styled with Haiku theme tokens. They do not import or wrap MUI.
+Import them from `haiku-ui` or their `haiku-ui/src/ui/` modules.
+
+The only dropdown is `Floater`. Opened from inside a `Dialog` (or any native modal `<dialog>`), it renders its
+menu inside that dialog so the top layer cannot hide it.
 
 ```tsx
 import { Dialog, InputField, Notice } from 'haiku-ui';

@@ -1,7 +1,7 @@
 import { Backdrop, Popper } from '@mui/material';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, MouseEvent, PropsWithChildren, ReactElement } from 'react';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Item from './Item';
 import './styles.scss';
 
@@ -30,7 +30,8 @@ const Floater: FC<PropsWithChildren<Props>> = ({
   disabled,
   ...rest
 }) => {
-  const anchorRef = useRef<HTMLDivElement>(null);
+  // State rather than a ref, so a menu that is open on first render re-renders once its anchor exists.
+  const [anchor, setAnchor] = useState<HTMLDivElement | null>(null);
 
   const [isSelfOpen, setIsSelfOpen] = useState(false);
 
@@ -43,10 +44,17 @@ const Floater: FC<PropsWithChildren<Props>> = ({
     onClose?.();
   };
 
+  const open = Boolean(isOpen || isSelfOpen);
+  // A native modal <dialog> sits in the browser's top layer and makes the rest of the page inert, so a
+  // menu portalled to <body> would be drawn underneath it and could not be clicked. Opened from inside
+  // one, the menu renders into that dialog instead, positioned `fixed` so the dialog's overflow does
+  // not clip it.
+  const dialog = open ? (anchor?.closest('dialog') ?? undefined) : undefined;
+
   return (
     <>
       <div
-        ref={anchorRef}
+        ref={setAnchor}
         className={classNames('floater-anchor', className, { disabled })}
         onClick={(e) => {
           e.stopPropagation();
@@ -58,7 +66,7 @@ const Floater: FC<PropsWithChildren<Props>> = ({
         {button}
       </div>
       <Backdrop
-        open={isOpen || isSelfOpen}
+        open={open}
         onClick={handleClose}
         sx={{
           position: 'fixed',
@@ -68,8 +76,10 @@ const Floater: FC<PropsWithChildren<Props>> = ({
         }}
       />
       <Popper
-        open={isOpen || isSelfOpen}
-        anchorEl={anchorRef.current}
+        open={open}
+        anchorEl={anchor}
+        container={dialog}
+        popperOptions={dialog ? { strategy: 'fixed' } : undefined}
         role={undefined}
         placement="bottom-start"
         className="z-1399"

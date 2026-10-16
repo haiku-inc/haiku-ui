@@ -31,11 +31,14 @@ describe('native table and pagination', () => {
     );
     expect(screen.getByRole('button', { name: 'Previous page' })).toBeDisabled();
     expect(screen.getByText('1–75 of 80')).toBeVisible();
-    expect(screen.getByRole('combobox', { name: 'Rows per page' })).toHaveValue('75');
+    expect(screen.getByRole('button', { name: 'Rows per page 75' })).toBeVisible();
     fireEvent.click(screen.getByRole('button', { name: 'Next page' }));
     expect(page).toHaveBeenCalledExactlyOnceWith(1);
-    fireEvent.change(screen.getByRole('combobox'), { target: { value: '50' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Rows per page 75' }));
+    expect(screen.getByRole('option', { name: '75' })).toHaveAttribute('aria-selected', 'true');
+    fireEvent.click(screen.getByRole('option', { name: '50' }));
     expect(size).toHaveBeenCalledExactlyOnceWith(50);
+    expect(screen.queryByRole('option')).toBeNull();
     rerender(<Pagination page={0} pageSize={75} total={0} onPageChange={page} onPageSizeChange={size} />);
     expect(screen.getByText('0–0 of 0')).toBeVisible();
     expect(screen.getByRole('button', { name: 'Next page' })).toBeDisabled();
