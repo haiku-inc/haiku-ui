@@ -7,6 +7,7 @@ import {
   type InputHTMLAttributes,
   type ReactNode,
   type Ref,
+  type SelectHTMLAttributes,
 } from 'react';
 import './styles.scss';
 
@@ -58,6 +59,50 @@ export function CheckboxField({ label, description, className, id, ...input }: O
         <span>{label}</span>
       </label>
       {description && <small id={`${inputId}-help`}>{description}</small>}
+    </div>
+  );
+}
+
+/** Native, labelled selection for bounded settings and permission forms. */
+export function SelectField({
+  label,
+  description,
+  error,
+  className,
+  id,
+  options,
+  ...select
+}: FieldProps &
+  Omit<SelectHTMLAttributes<HTMLSelectElement>, 'className' | 'size'> & {
+    options: readonly { value: string; label: string; disabled?: boolean }[];
+  }) {
+  const generatedId = useId();
+  const selectId = id ?? generatedId;
+  return (
+    <div className={classNames('haiku-field', className)}>
+      <label htmlFor={selectId}>{label}</label>
+      <select
+        {...select}
+        id={selectId}
+        aria-invalid={error ? true : select['aria-invalid']}
+        aria-describedby={
+          [select['aria-describedby'], description && `${selectId}-help`, error && `${selectId}-error`]
+            .filter(Boolean)
+            .join(' ') || undefined
+        }
+      >
+        {options.map((option) => (
+          <option key={option.value} value={option.value} disabled={option.disabled}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {description && <small id={`${selectId}-help`}>{description}</small>}
+      {error && (
+        <small id={`${selectId}-error`} className="haiku-field__error" role="alert">
+          {error}
+        </small>
+      )}
     </div>
   );
 }

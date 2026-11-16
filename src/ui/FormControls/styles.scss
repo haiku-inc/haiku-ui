@@ -10,7 +10,8 @@
     font-size: 0.875rem;
     line-height: 1.4;
   }
-  > input {
+  > input,
+  > select {
     min-width: 0;
     width: 100%;
     min-height: 2.75rem;
