@@ -45,3 +45,6 @@ export { DataTable, Pagination } from './DataTable';
 export { default as Dialog } from './Dialog';
 export type { DialogProps } from './Dialog';
 export { CheckboxField, Disclosure, InputField, Notice, SelectField, UtcDateTimeField } from './FormControls';
+
+export { default as DropdownField } from './DropdownField';
+export type { DropdownFieldOption } from './DropdownField';

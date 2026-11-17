@@ -1,0 +1,63 @@
+.haiku-dropdown {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.35rem;
+  color: var(--text-primary);
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  &__trigger.button-general {
+    width: 100%;
+    min-height: 2.75rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    text-transform: none;
+    line-height: 1.4;
+    padding: 0.5rem 0.75rem;
+  }
+  &__menu {
+    position: fixed;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: var(--floater-bg, var(--background-card));
+    color: var(--floater-text, var(--text-primary));
+    border: 1px solid var(--floater-border, var(--border-terminal));
+    border-radius: 8px;
+    padding: 5px;
+    > button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+      border: 0;
+      border-radius: 6px;
+      padding: 0.5rem 0.65rem;
+      background: var(--floater-bg-item, transparent);
+      color: inherit;
+      &:hover,
+      &:focus-visible {
+        background: var(--floater-bg-item-hover);
+        outline: 2px solid var(--primary);
+        outline-offset: -2px;
+      }
+      &[aria-selected='true'] {
+        background: var(--floater-bg-item-highlighted, var(--floater-bg-item-hover));
+      }
+      &:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+      }
+    }
+  }
+  small {
+    color: var(--text-dimmed);
+    font-size: 0.8rem;
+  }
+}
