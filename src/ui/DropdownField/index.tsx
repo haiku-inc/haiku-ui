@@ -69,7 +69,7 @@ export default function DropdownField({
     window.addEventListener('resize', position);
     window.addEventListener('scroll', position, true);
     return () => {
-      element.hidePopover?.();
+      if (element.isConnected) element.hidePopover?.();
       window.removeEventListener('resize', position);
       window.removeEventListener('scroll', position, true);
     };
